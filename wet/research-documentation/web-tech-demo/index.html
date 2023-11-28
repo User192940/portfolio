@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="css/prism.css" rel="stylesheet">
+    <title>Research/Documentation</title>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@v0.158.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@v0.158.0/examples/jsm/"
+          }
+        }
+      </script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body class="home">
+    <div class="wrapper">
+        <div class="nav-container">
+            <ul class="navbar"> 
+                <li>
+                    <h1>
+                        <a target="_blank" href="https://www.freecodecamp.org/news/render-3d-objects-in-browser-drawing-a-box-with-threejs/">
+                            Create 3D Objects Using Three.js
+                        </a>
+                    </h1>
+                </li>
+                <li>
+                    <ul class="nav-links">
+                        <li><h2><a href="../../index.html">Home</a></h2></li>
+                        <li><h2><a href="">Resources</a></h2></li>
+                        <li><h2><a href="">About</a></h2></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="mobile-links">
+                <li><h2><a href="../../index.html">Home</a></h2></li>
+                <li><h2><a href="">Resources</a></h2></li>
+                <li style="margin-left:0;"><h2><a href="">About</a></h2></li>
+            </ul>
+            </div>
+        <div class="main">
+            <section>
+                <h2>Who?</h2>
+                <p>FreeCodeCamp is the source of the demo. </p>
+                <h2>Where?</h2>
+                <p><a class="cta" target="_blank" href="https://www.freecodecamp.org/news/render-3d-objects-in-browser-drawing-a-box-with-threejs/">FreeCodeCamp</a></p>
+                <h2 style="margin-top: 5rem;">When?</h2>
+                The article was written on Febuary 3, 2021.
+                <h2>What</h2>
+                Three.js is a javascript library that can be used to render 3D objects in the browser. Three.js uses WebGL under the hood to render the graphics. 
+                <h2>Why?</h2>
+                <p>I find this interesting because you can tranform a 2D plane (the browser) into a 3D experience. If implemented properly it can leave users with a unique expereince. Another reason I found this interesting is because you can create browser games using this library. </p>
+                <h2>Step 1 - Access three.js </h2>
+                <p>Before we can get started we need a way to access the three.js library. There are two ways of doing this. One way is to use NPM and a build tool to install it locally and the second is to use a CDN. If you don't have NPM and would like to install it instructions are found <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">here</a>. </p>
+                <pre><code class="language-javascript">
+# three.js
+npm install --save three
+                </code></pre>
+                <p>To import from a CDN you simply put the code below in the head element. Replace "version" with whatever version you want, in todays tutorial I will be using v0.158.0.</p>
+                <pre><code class="language-javascript">
+&lt;script type="importmap"&gt;
+    {
+        "imports": {
+        "three": "https://unpkg.com/three@&lt;version&gt;/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@&lt;version&gt;/examples/jsm/"
+        }
+    }
+&lt;/script&gt;
+                                    </code></pre>
+                <h2>Step 2 - Set The Scene</h2>
+                <p>Import the "three" library and define the scene object. This is where we put 3D objects and lights. You can edit some properties of the scene, in this example we will use the default settings.</p>
+                <pre><code class="language-javascript">
+import * as THREE from "three";
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x000000); // Optional, black is default</code></pre>
+                <h2>Step 3 - Mesh it Up</h2>
+                <p>Add a 3D box to the scene as a mesh. A mesh is a combination of geometry and a material.</p>
+                <pre><code class="language-javascript">
+// Add a cube to the scene
+const geometry = new THREE.BoxGeometry(3, 1, 3); // width, height, depth
+const material = new THREE.MeshLambertMaterial({ color: 0x5499C7 });
+const mesh = new THREE.Mesh(geometry, material);
+mesh.position.set(0, 0, 0); // Optional, 0,0,0 is the default
+scene.add(mesh);
+                    </code></pre>
+                <h2>Step 4 - Let there be light</h2>
+                <p>Some objects will have a set color regardless of light because of the material. The lambert and phong material require light to show their color. There are two types of light ambient and directional. Ambient light will illuminate every side of the shape, but it won't show dimension. This is where directional lights come in. With directional light you can light up an object the same way you would in real life given a dark room and a light source.</p>
+                <pre><code class="language-javascript">
+// Set up lights
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+scene.add(ambientLight);
+                </code></pre>
+                <h2>Step 5 - Camera</h2>
+                <p>So far we have a mesh, lights, and a scene. Now we need a camera to define how we see the scene. There are two options perspective cameras and orthographic cameras. Perspective cameras give you the impression of being in the scene because they mimic real life. Closer objects appear larger and further objects appear smaller. Orthographic camers display everything as the same size no matter the distance. The image below shows the difference between the two. </p>
+                <img src="images/camera-types.webp" alt="perspective vs orthographic camera" width="500">
+                <p>If you have decided on a perspective camera use the code below to intiate the camera object.</p>
+                <pre><code class="language-javascript">
+// Perspective camera
+const aspect = window.innerWidth / window.innerHeight;
+const camera = new THREE.PerspectiveCamera(
+    45, // field of view in degrees
+    aspect, // aspect ratio
+    1, // near 
+    100 // far plane
+);
+camera.position.set(4, 4, 4); //set where the camera is
+camera.lookAt(0, 0, 0); //set the direction of the camera
+                </code></pre>
+                <p>If you have decided on an orthographic use this code. </p>
+                <pre><code class="language-javascript">
+// Orthographic camera
+const width = 10;
+const height = width * (window.innerHeight / window.innerWidth);
+const camera = new THREE.OrthographicCamera(
+    width / -1, // left
+    width / 1, // right
+    height / 1, // top
+    height / -1, // bottom
+    1, // near
+    100 // far
+);
+camera.position.set(4, 4, 4); //set where the camera is
+camera.lookAt(0, 0, 0); //set the direction of the camera
+
+                </code></pre>
+                <h2>Step 6 - Lights, Camera, Action!</h2>
+                <p>Now that we have everything in our scene, we need something to render it to our browser. We will define a WebGLRenderer that will render the image to an HTML canvas. Now is when we set the width and height of the canvas. </p>
+                <pre><code class="language-javascript">
+// Renderer
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.render(scene, camera);
+                    
+// Add it to HTML
+document.body.appendChild(renderer.domElement);
+                </code></pre>
+                <p>You should now have a 3D rendered object made with three.js. Credit goes to Hunor at freeCodeCamp for providing an excellent tutorial. </p>
+                <a class="cta" target="_blank" href="https://www.youtube.com/watch?v=hBiGFpBle7E&embeds_referring_euri=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Frender-3d-objects-in-browser-drawing-a-box-with-threejs%2F&source_ve_path=MjM4NTE&feature=emb_title">Learn More</a>
+                <a class="cta" style="margin-left:9rem;" href="js/threejs-tutorial.zip">JS Used</a>
+            </section>
+            <script type="module" src="./js/script.js"></script>
+        </div>
+        <footer>
+            <p>
+                <a href="../../index.html">
+                    &copy; 2023 - David Fedchuk
+                </a>
+                <a href="javascript:void(location='https://jigsaw.w3.org/css-validator/validator?uri='+escape(location))
+                ">CSS</a>
+                <a href="javascript:void(location='https://validator.w3.org/nu/?doc='+escape(location))
+                ">HTML</a>
+            </p>
+        </footer>
+    </div>
+    <script src="js/prism.js"></script>
+</body>
+</html>

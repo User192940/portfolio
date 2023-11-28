@@ -1,0 +1,365 @@
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      :root {
+        font-size: 16px;
+        font-family: 'Open Sans';
+        --text-primary: #b6b6b6;
+        --text-secondary: #ececec;
+        --bg-primary: #23232e;
+        --bg-secondary: #141418;
+        --transition-speed: 600ms;
+      }
+      
+      body {
+        color: black;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      
+      body::-webkit-scrollbar {
+        width: 0.25rem;
+      }
+      
+      body::-webkit-scrollbar-track {
+        background: #1e1e24;
+      }
+      
+      body::-webkit-scrollbar-thumb {
+        background: #6649b8;
+      }
+      
+      .navbar {
+        position:fixed;
+        background-color: var(--bg-primary);
+        transition: 600ms ease;
+      }
+      
+      .navbar-nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+      }
+      
+      .nav-item {
+        height: 100%;
+        width: 100%;
+      }
+      
+      .nav-link {
+        display: flex;
+        align-items: center;
+        height: 5rem;
+        width: 100%;
+        color: var(--text-primary);
+        text-decoration: none;
+        filter: grayscale(100%) opacity(0.7);
+        transition: var(--transition-speed);
+      }
+      
+      .nav-link:hover {
+        filter: grayscale(0%) opacity(1);
+        background: var(--bg-secondary);
+        color: var(--text-secondary);
+      }
+      
+      .link-text {
+        margin-left: 1rem;
+      }
+      
+      .nav-link svg {
+        width: 2rem;
+        min-width: 2rem;
+        margin: 0 0 0 1rem;
+      }
+      
+      .fa-primary {
+        color: #ff7eee;
+      }
+      
+      .fa-secondary {
+        color: #df49a6;
+      }
+      
+      .fa-primary,
+      .fa-secondary {
+        transition: var(--transition-speed);
+      }
+      
+      .logo {
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: var(--text-secondary);
+        background: var(--bg-secondary);
+        font-size: 1.5rem;
+        letter-spacing: 0.3ch;
+        width: 12%;
+      }
+      
+      .logo svg {
+        margin-left: 210px;
+      }
+      
+      .logo-text
+      {
+        display: inline;
+        position: absolute;
+        transition: var(--transition-speed);
+      }
+      
+      /* Small screens */
+      @media (max-width: 600px) {
+        body{
+          font-size: 20px;
+          margin-top: 55px;
+          width: 100%;
+          overflow-x: hidden;
+        }
+        header{
+          z-index: 1;
+          position: fixed;
+          background-color: white;
+          top:0;
+          margin:0;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height:75px;
+        }
+        header h1{
+          margin: 10px 0 0 0;
+          height: 60px;
+          text-align: center;
+          align-items: center;
+        }
+        #header-border{
+          top:75px;
+          width: 100%;
+          border-top:black 1px solid;
+          min-height: 7px;
+          background-color: #b6b6b6;
+          border-bottom: 7px solid #23232e;
+        }
+        .flex-container{
+          margin-top:40px;
+          padding: 0 10px;
+        }
+        .navbar {
+          bottom: 0;
+          width: 100vw;
+          height: 5rem;
+          position:fixed;
+          display: none;
+
+        }
+        .logo {
+          display: none;
+        }
+      
+        .navbar-nav {
+          flex-direction: row;
+        }
+      
+        .nav-link {
+          justify-content: center;
+        }
+        #projects{
+          display:flex;
+          flex-direction: column;
+          width: 100%;
+        }
+        .projects-ul{
+          list-style-type: none;
+          padding: 0 10px;
+
+        }
+        .projects-elements{
+          text-align: center;
+          margin: 10px 0; 
+          padding: 10px;
+          background-color: lightgrey;
+        }
+        .card{
+          border: 1px solid lightgrey;
+          border-radius: 12px;
+          overflow: hidden;
+          margin-bottom: 30px;
+        }
+        .card:hover{
+          box-shadow: 3px 3px 5px #23232e;
+        }
+        .card-image{
+          display: flex;
+          width: 100%;
+          height: auto;
+        }
+        .card-image img{
+          width:100%;
+        }
+        .card-header h2{
+          text-align: center;
+        }
+        .card-description{
+          margin: 30px;
+        }
+        li a{
+          text-decoration: none;
+          color: black;
+        }
+        main {
+          margin: 0;
+          padding: 0;
+          left: 0;
+          display: flex;
+          width: 100%;
+          flex-direction: column;
+        }
+        .projects-ul:last-child{
+          margin-bottom:0;
+        }
+        .card:last-child{
+          margin-bottom: 0;
+        }
+        footer{
+          padding: 1rem 0;
+          margin-left: 1rem;
+        }
+      }
+      
+      /* Large screens */
+      @media (min-width: 600px) {
+        body{
+          width: 50vw;
+          font-size:20px;
+        }
+        main{
+          padding: 0;
+          margin-top: 3rem;
+        }
+        .navbar {
+          top: 0;
+          height: 5rem;
+          width: 100vw;
+          position: fixed;
+          border: 1px solid lightgrey;
+        }
+        .navbar-nav{
+          flex-direction: row;  
+          justify-content: flex-end;
+        }
+        .nav-item{
+          text-align: center;
+        }
+        .nav-item:last-child{
+          margin-right: 3rem;
+        }
+        header{ 
+          margin: 6rem 0 0 5rem;
+        }
+        header h1{
+          margin: 1rem 1rem 0 1rem;
+        }
+        #header-border{
+          width: 30%;
+          border-top:darkblue 1px solid;
+        }
+        .projects-elements{
+          margin-bottom: 0;
+          padding-left: 1rem;
+        }
+        .projects-ul{
+          margin: 40px 0 0 0;
+          display: flex;
+          flex-wrap: wrap; 
+          list-style: none;
+        }
+        .card{
+          display: flex;
+          width: 33%;
+          height: 250px;
+          margin: 5px;
+          padding: 1rem;
+          background-color: #f0ead6;
+          border-radius: 1rem;
+        }
+        .card:hover{
+          box-shadow: 3px 3px 5px #23232e;
+        }
+        .card-header{
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          height: 80px;
+        }
+        .card-image img{
+          width: auto;
+          height: 80px;
+        }
+        .card a{
+          text-decoration: none;
+          color: black;
+        }
+        .card-description{
+          margin-top: 10px;
+        }
+        .card-header h2{
+          margin: 0 0 0 10px;
+        }
+        .underline{
+          width: 20%;
+          border-bottom: darkblue 1px solid;
+        }
+        .flex-container{
+          margin-top: 5px;
+          padding-left: 1rem;
+        }
+        footer{
+          margin-right: 1rem;
+        }
+      }
+      
+      .dark {
+        --text-primary: #b6b6b6;
+        --text-secondary: #ececec;
+        --bg-primary: #23232e;
+        --bg-secondary: #141418;
+      }
+      
+      .light {
+        --text-primary: #1f1f1f;
+        --text-secondary: #000000;
+        --bg-primary: #ffffff;
+        --bg-secondary: #e4e4e4;
+      }
+      
+      .solar {
+        --text-primary: #576e75;
+        --text-secondary: #35535c;
+        --bg-primary: #fdf6e3;
+        --bg-secondary: #f5e5b8;
+      }
+      
+      .theme-icon {
+        display: none;
+      }
+      
+      .dark #darkIcon {
+        display: block;
+      }
+      
+      .light #lightIcon {
+        display: block;
+      }
+      
+      .solar #solarIcon {
+        display: block;
+      }

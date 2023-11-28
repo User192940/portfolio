@@ -1,0 +1,19 @@
+#markdown-output{
+    position: relative;
+    width: min(800px, 100%);
+    margin: 0 auto;
+    z-index: 10;
+    background-color: whitesmoke;
+    left: 0;
+    right: 0;
+}
+footer{
+    position: unset;
+    align-self: end;
+}
+@media (width >= 800px)
+{
+    footer a:nth-child(3) {
+        margin-right: 8px;
+    }
+}
