@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title id="title">Unobtrusive JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/a04.css" />
+  </head>
+
+  <body>
+    <div id="page" style="height: 40vh">
+      <form method="post" style="text-align: center" id="formSubmit">
+        <span style="color: white">Select a number for a random prize:</span>
+        <select id="dropdown">
+          <option value="">Select an option</option>
+          <option value="1">Prize 1</option>
+          <option value="2">Prize 2</option>
+          <option value="3">Prize 3</option>
+          <option value="4">Prize 4</option>
+        </select>
+        <div id="text"></div>
+        <input type="checkbox" id="terms" />
+        <label style="color: white" for="terms" class="checkbox"
+          >Check to agree to terms & conditions</label
+        >
+        <div id="termsHint"></div>
+        <input type="submit" value="next" />
+      </form>
+    </div>
+    <footer>
+      <a
+        href="javascript:void(location='https://jigsaw.w3.org/css-validator/validator?uri='+escape(location))"
+        >CSS</a
+      >
+      <a
+        href="javascript:void(location='https://validator.w3.org/nu/?doc='+escape(location))"
+        >HTML</a
+      >
+    </footer>
+    <script src="05.js"></script>
+  </body>
+</html>

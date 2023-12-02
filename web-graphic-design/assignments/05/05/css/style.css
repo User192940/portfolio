@@ -1,0 +1,734 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+ul,
+ol {
+    padding-left: 0;
+    list-style: none;
+}
+
+sup {
+    line-height: 0;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+html {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    background:
+        linear-gradient(0deg, rgba(14,1,79,1) 0%, rgba(193,48,205,1) 95%) fixed;
+}
+.callout {
+    font-family: sans-serif;
+    background: white;
+    color: black;
+    padding: 0;
+}
+
+.callout-heading {
+    color: black;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin: 0 0 32px;
+}
+
+.callout-intro {
+    color: black;
+    font-size: 1.5em;
+    margin: 0 0 16px;
+}
+
+.subscribe-newsletter {
+    --color-white-20: hsla(0, 0%, 100%, 0.20);
+    --color-white-40: hsla(0, 0%, 100%, 0.40);
+    --color-white-60: hsla(0, 0%, 100%, 0.60);
+    --color-white-80: hsla(0, 0%, 100%, 0.80);
+    --color-black-20: hsla(0, 0%, 0%, 0.20);
+    --color-black-40: hsla(0, 0%, 0%, 0.40);
+    --color-black-60: hsla(0, 0%, 0%, 0.60);
+    --color-black-80: hsla(0, 0%, 0%, 0.80);
+    --color-button-dark: hsla(248, 100%, 53%, 1);
+    --color-button-light: hsla(54, 86%, 58%, 1.00);
+    --z-index: -1;
+}
+
+.subscribe-newsletter {
+    transition: all 1s ease-in;
+    background: var(--color-white-20);
+    border-radius: .5em;
+    border: 1px solid black;
+}
+
+.subscribe-newsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    overflow: hidden;
+    background: linear-gradient(to right, #0756b0 0%, #4530a8 80%);
+}
+
+.subscribe-newsletter fieldset {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+    color: white;
+}
+
+.subscribe-newsletter fieldset:first-child {
+    flex: 1 1 auto;
+}
+
+.subscribe-newsletter fieldset:last-child::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("images/loader-circles-spin.svg") no-repeat center;
+    z-index: var(--z-index, -1);
+}
+
+.subscribe-newsletter input:not([type="radio"]):not([type="checkbox"]) {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0;
+}
+
+.subscribe-newsletter input {
+    position: relative;
+    font-family: inherit;
+    font-size: 1.2em;
+    line-height: 2.4;
+    letter-spacing: 0.05em;
+    padding: 0 .5em;
+    margin: 0;
+    color: var(--color-button-dark);
+}
+
+.subscribe-newsletter input[type=email] {
+    background: var(--color-white-60);
+    border: 1px solid black;
+}
+
+.subscribe-newsletter input[type=email]:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--color-button-dark);
+}
+
+.subscribe-newsletter input::placeholder {
+    position: relative;
+    color: var(--color-button-dark);
+    opacity: .4
+}
+
+.subscribe-newsletter input::placeholder {
+    transition: 1s cubic-bezier(1, 1.65, 0.35, 1.32), opacity 1s ease;
+}
+
+.subscribe-newsletter input:focus::placeholder {
+    transform: translateX(100%);
+    transition: 3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 1s ease;
+    opacity: 0
+}
+
+.subscribe-newsletter input[type=submit],
+.subscribe-newsletter input[type=submit]:invalid {
+    background: var(--color-button-dark);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 1em;
+    transition: all 1s .5s ease-in;
+    transform-origin: right center;
+    transform: scale(1);
+    box-shadow: 0 0 0px 0px var(--color-black-60);
+}
+
+.subscribe-newsletter:valid input[type=submit] {
+    color: var(--color-button-light);
+    background: var(--color-button-dark);
+    transform: scale(.5);
+    transition: transform 1s linear, opacity 2s ease;
+    box-shadow: -2px 2px 4px var(--color-black-60), -2px -2px 4px var(--color-black-60);
+}
+.subscribe-newsletter fieldset input[type=submit]:disabled {
+    background: var(--color-button-light);
+    color: black;
+    box-shadow: 0 0 0px 0px var(--color-black-60);
+    border: black;
+}
+
+.subscribe-newsletter label {
+    color: white;
+    line-height: 1.625em;
+    padding: 0 .5em;
+}
+
+.subscribe-newsletter.sending {
+    background: var(--color-button-light);
+}
+
+.subscribe-newsletter.received {
+    background: linear-gradient(to right, #0756b0 0%, #4530a8 80%);
+    transition: all .5s ease-in;
+}
+
+.subscribe-newsletter .subscribe-newsletter-message-error {
+    background: var(--color-button-dark);
+}
+
+.subscribe-newsletter .subscribe-newsletter-message-success {
+    background: linear-gradient(to right, #0756b0 0%, #4530a8 80%);
+    color: white;
+    font-size: 1.6em;
+    flex: 1;
+    text-align: center;
+    transition: all .5s ease-in;
+}
+.container {
+    margin: 0 .625rem;
+    overflow: hidden;
+}
+
+.wrapper {
+    border: 2px solid white;
+    border-radius: 10px;
+    background: #393B3D;
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    background: transparent;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+header h1 {
+    line-height: 2;
+    text-align: center;
+    flex: 1 0 auto;
+    margin: 0;
+    color: #fff;
+    font-family: "Myriad Pro Regular", sans-serif;
+    font-weight: 200;
+    letter-spacing: 4px;
+    text-shadow: 0 -2px 2px rgba(0, 0, 0, 0.6);
+    background: transparent;
+}
+
+header h1 sup {
+    font-size: .6em;
+}
+
+section {
+    overflow: hidden;
+    margin: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+    background: #fff linear-gradient(to bottom, rgba(0, 0, 0, 0.80) 0%, rgba(255, 255, 255, 0.60) 5%, rgba(255, 255, 255, 1) 20%);
+}
+
+h2 {
+    margin: 24px 0 6px;
+}
+
+p {
+    margin: 0 0 16px;
+    line-height: 1.4;
+    text-indent: 12px;
+}
+
+img {
+    width: 100%;
+}
+
+footer {
+    clear: both;
+    overflow: auto;
+    margin: 0 20px;
+    padding: 0 0 20px;
+    color: #fff;
+}
+
+footer a[href^=javascript] {
+    position: relative;
+    color: #000;
+    display: block;
+    line-height: 2em;
+    font-size: 0.625em;
+    background-color: #fff;
+    border-radius: 3px;
+    margin: 0 0 0 10px;
+    padding: 0 10px;
+    float: right;
+    text-decoration: none;
+    box-shadow: 0 2px 2px #000;
+}
+
+footer a[href^=http]:active {
+    top: 2px;
+    box-shadow: none;
+}
+
+a.buttonv01 {
+    display: inline-block;
+    line-height: 2;
+    padding: 0 1em;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 1px solid hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0px 2px 6px hsla(0, 0%, 0%, 0.8);
+    background: linear-gradient( to bottom, hsla(0, 0%, 100%, 0.8) 0px, hsl(204, 97%, 49%) 2px, hsl(218, 82%, 47%) );
+    font-weight: bold;
+}
+a.buttonv01-large{
+    font-size: 1.7em;
+}
+a.buttonv01-small{
+    font-size:.6em;
+}
+a.buttonv01:hover {
+    box-shadow: none;
+    transform: scale(1.1);
+}
+a.buttonv01:active {
+    box-shadow: inset 0 2px 4px hsla(0, 0%, 0%, 1);
+}
+
+a.buttonv02 {
+    display: inline-block;
+    line-height: 2;
+    padding: 0 1em;
+    text-decoration: none;
+    border-radius: 1em;
+    border: 1px solid hsl(0, 0%, 0%);
+    color: white;
+    box-shadow: 0px 2px 6px hsla(0, 0%, 0%, 0.8);
+    background: linear-gradient(0deg, rgba(130,2,2,1) 0%, rgba(196,0,0,1) 95%);
+    font-weight: bold;
+}
+a.buttonv02-large{
+    font-size: 2em;
+}
+a.buttonv02-small{
+    font-size:.8em;
+}
+a.buttonv02:hover {
+    box-shadow: none;
+    box-shadow: 
+      inset 0 1.4em 0 hsla(240deg, 50%, 12%, 0.1), 
+      inset 0 0 1.4em hsla(240deg, 50%, 12%, 0.32), 
+      inset 0 1px 1px hsla(240deg, 50%, 12%, 0.32);
+}
+a.buttonv02:active {
+    box-shadow: inset 0 2px 4px hsla(0, 0%, 0%, 1);
+}
+a.buttonv03 {
+    display: inline-block;
+    line-height: 2;
+    padding: 0 1em;
+    text-decoration: none;
+    border-radius: 1em;
+    border: 1px solid hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0px 2px 6px hsla(0, 0%, 0%, 0.8);
+    background: linear-gradient(0deg, rgba(3,91,10,1) 0%, rgba(6,166,13,1) 95%);
+    font-weight: bold;
+    
+}
+a.buttonv03-large{
+    font-size: 2em;
+}
+a.buttonv03-small{
+    font-size:.8em;
+}
+a.buttonv03:hover {
+    box-shadow: none;
+    transform: translateY(-4px);
+  background: linear-gradient(0deg, rgba(3,91,10,1) 0%, rgba(6,166,13,1) 95%);
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+a.buttonv03:active {
+    box-shadow: inset 0 2px 4px hsla(0, 0%, 0%, 1);
+}
+a.buttonv04 {
+    display: inline-block;
+    line-height: 2;
+    padding: 0 1em;
+    text-decoration: none;
+    border-radius: 1em;
+    border: 1px solid hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0px 2px 6px hsla(0, 0%, 0%, 0.8);
+    background: linear-gradient( to bottom, hsla(0, 0%, 100%, 0.8) 0px, hsl(204, 97%, 49%) 2px, hsl(218, 82%, 47%) );
+
+    background: linear-gradient(to left, hsl(204, 97%, 49%) 50%, rgba(3,91,10,1) 50%) right;
+    background-size: 200%;
+    transition: .3s ease-out;
+    font-weight: bold;
+}
+a.buttonv04-large{
+    font-size: 2em;
+}
+a.buttonv04-small{
+    font-size:.8em;
+}
+a.buttonv04:hover {
+    box-shadow: none;
+    background-position: left;
+}
+a.buttonv04:active {
+    box-shadow: inset 0 2px 4px hsla(0, 0%, 0%, 1);
+}
+.header-main {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    background: linear-gradient(0deg, rgba(14,1,79,1) 0%, rgba(138,41,156,1) 95%) fixed;
+    box-shadow: inset 0 2px 4px hsla(0, 0%, 0%, 0.8), 0px 4px 6px 0px hsla(227, 17%, 16%, 0.62);
+}
+
+/**
+ * .header-main h1
+ * - line-height 2 times the inherited font-size
+ * - float left - shrink wrap the width around the content
+ * - position relative - can be positioned
+ * - left: 50% find the left edge of the element and align with 50% left of parent element
+ * - translateX move the element based on the element size -50% plus half the size of the hamburger
+ * - this will center the h1 in the negative space to the right of the hamburger
+ * - not the center of the parent element
+ */
+.header-main h1 {
+    line-height: 2;
+    float: left;
+    position: relative;
+    left: 50%;
+    transform: translateX(calc(-50% + 32px));
+    margin: 0;
+    color: hsl(0, 0%, 100%);
+    font-family: "Myriad Pro Regular", sans-serif;
+    font-weight: 200;
+    letter-spacing: 4px;
+    text-shadow: 0 -2px 2px hsla(0, 0%, 0%, 0.6);
+}
+
+.header-main h1 sup {
+    font-size: .6em;
+}
+
+.nav-main {
+    position: relative;
+}
+
+/* hide the check box - input type=checkbox*/
+.nav-main-menu-toggle {
+    display: none;
+}
+
+/* style the checkbox's label */
+.nav-main-menu-toggle-icon {
+    position: fixed;
+    z-index: 200;
+    width: 64px;
+    height: 64px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+/* position the span in the label - this is the hamburger of the hamburger icon */
+.nav-main-menu-toggle-icon span {
+    width: 80%;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+/**
+ * .nav-main-menu-toggle-icon span
+ * - build the hamburger icon
+ * - ::before and ::after are pseudo elements
+ * - they do not exist in the markup but we can style them
+ * - every element that has content has ::before and ::after
+ * - each line is 6px tall with a 3px border radius
+ */
+.nav-main-menu-toggle-icon span::before,
+.nav-main-menu-toggle-icon span,
+.nav-main-menu-toggle-icon span::after {
+    background-color: hsl(0, 0%, 100%);
+    height: 6px;
+    position: absolute;
+    content: '';
+    transition: all .25s ease-in;
+    border-radius: 3px;
+}
+
+.nav-main-menu-toggle-icon span::before {
+    width: 100%;
+    top: -10px;
+}
+
+.nav-main-menu-toggle-icon span::after {
+    width: 100%;
+    top: 10px;
+}
+
+/**
+ * .element ~ element
+ * - is the General sibling combinator
+ * - find .nav-main-menu-toggle:checked
+ * - when the input is checked...
+ * - style the .nav-main-menu-toggle-icon span
+ * - a trick to use the input type="checkbox" to trigger changes in our layout
+ */
+.nav-main-menu-toggle:checked~.nav-main-menu-toggle-icon span {
+    background-color: transparent;
+}
+
+.nav-main-menu-toggle:checked~.nav-main-menu-toggle-icon span::before,
+.nav-main-menu-toggle:checked~.nav-main-menu-toggle-icon span::after {
+    top: 0;
+}
+
+.nav-main-menu-toggle:checked~.nav-main-menu-toggle-icon span::before {
+    transform: rotate(-135deg);
+}
+
+.nav-main-menu-toggle:checked~.nav-main-menu-toggle-icon span::after {
+    transform: rotate(135deg);
+}
+
+/* style the UL left 0 width 0 can not be seen */
+.nav-main-menu {
+    position: fixed;
+    z-index: 50;
+    top: 4em;
+    left: 0;
+    width: 0;
+    height: calc(100vh - 3em);
+    transition:
+        width .5s .25s ease-in,
+        box-shadow .25s ease-in;
+    background-color: hsla(210, 3%, 23%, 0.96);
+    box-shadow: none;
+    overflow-y: auto;
+}
+
+/* when input checked show the UL */
+.nav-main-menu-toggle:checked~.nav-main-menu {
+    width: 60vw;
+    box-shadow: 0 0 0 100vw hsla(210, 3%, 23%, 0.40);
+
+}
+
+/* style the anchor */
+.nav-main-menu a {
+    position: relative;
+    display: block;
+    font-size: 1.5em;
+    line-height: 2;
+    font-weight: 300;
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+    text-indent: 1.25rem;
+    margin: 4px 0;
+    transition: all .25s ease-in;
+}
+
+/* create and style the anchor's ::before pseudo element */
+.nav-main-menu a::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-280%);
+    content: "";
+    display: inline-block;
+    width: 10px;
+    background: hsl(0, 0%, 100%);
+    transition: inherit;
+}
+
+/* style anchor :hover */
+.nav-main-menu a:hover {
+    text-indent: 1.5rem;
+}
+
+/* style the ::before when :hover on anchor */
+.nav-main-menu a:hover::before {
+    transform: translateX(100vw);
+    opacity: 0;
+}/*
+Start Media Query
+    if screen is 48rem or larger (can use px or em)
+    rem is based on font size of root element
+        (16px * 48 = 768)
+    use the following rules
+*/
+
+@media (min-width: 48rem) {
+    .container {
+        width: 96%;
+        max-width: 800px;
+        margin: 20px auto;
+    }
+
+    header h1 {
+        line-height: 2;
+        font-size: 2.75em;
+        align-self: flex-end;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    img {
+        width: 175px;
+        height: auto;
+        float: right;
+        margin: 0 0 2px 4px;
+    }
+    .header-main {
+        position: static;
+        height: 120px;
+        border-radius: 10px;
+        border: 2px solid hsl(0, 0%, 50%);
+        margin: 20px;
+        background: transparent linear-gradient(to bottom,
+            hsla(218, 62%, 80%, 0.7) 1px,
+            hsla(276, 72%, 50%, 0.7) 2px,
+            rgb(18, 8, 73));
+    }
+
+    .header-main h1 {
+        line-height: 120px;
+        font-size: 2.75em;
+        transform: translateX(-50%);
+        background: transparent;
+    }
+
+    /*  hide the checkbox and the hamburger */
+    .nav-main-menu-toggle,
+    .nav-main-menu-toggle-icon {
+        display: none;
+    }
+
+    /*  override and reset to no style */
+    .nav-main-menu {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 0;
+        top: auto;
+        left: auto;
+        width: auto;
+        height: auto;
+        transition: none;
+        background-color: transparent;
+        box-shadow: none;
+        overflow: hidden;
+        padding: 0 20px;
+    }
+
+    /*  override and reset to no style */
+    .nav-main-menu-toggle:checked~.nav-main-menu {
+        width: auto;
+        box-shadow: none;
+    }
+
+    /*  override and basic style for navigation large screen */
+    .nav-main-menu a {
+        position: static;
+        display: block;
+        text-indent: 0;
+        padding: 0 1em;
+        border: 2px solid hsl(0, 0%, 100%);
+        border-radius: 10px;
+        transition: all .25s linear;
+        box-shadow: 0 0px 4px currentColor;
+    }
+
+    /*  hide the a:::before */
+    .nav-main-menu a::before {
+        display: none;
+    }
+
+    /*  basic style for navigation large screen */
+    .nav-main-menu a:hover {
+        text-indent: 0;
+        color: hsl(213, 100%, 44%);
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 0 0px 0px currentColor;
+    }
+
+    .nav-main-menu a:active {
+        text-indent: 0;
+        color: hsl(213, 100%, 44%);
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: inset 0 0px 4px currentColor;
+    }
+    .callout {
+        padding: 50px;
+        margin: 15px;
+    }
+    .subscribe-newsletter {
+        flex-direction: row;
+        height: 8em;
+        align-items: center;
+    }
+    .subscribe-newsletter:valid input[type=submit] {
+        transform: scale(1);
+        background-color: var(--color-button-light);
+        color: black;
+        transition: all .5s ease-in;
+        animation: tilt-shaking 0.25s infinite;
+    }
+    .subscribe-newsletter:valid input[type=submit]:hover {
+        transform: scale(1.1);
+    }
+}
+@keyframes tilt-shaking {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+  }

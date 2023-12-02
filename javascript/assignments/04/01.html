@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title id="title">Unobtrusive JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/a04.css" />
+  </head>
+
+  <body>
+    <div id="page">
+      <h1 id="header">List</h1>
+      <a
+        onclick="calledFunction(this); return false;"
+        id="button"
+        href="images/icon-heart.png"
+        >Link to heart icon</a
+      >
+    </div>
+    <footer>
+      <a
+        href="javascript:void(location='https://jigsaw.w3.org/css-validator/validator?uri='+escape(location))"
+        >CSS</a
+      >
+      <a
+        href="javascript:void(location='https://validator.w3.org/nu/?doc='+escape(location))"
+        >HTML</a
+      >
+    </footer>
+    <script src="01.js"></script>
+  </body>
+</html>
