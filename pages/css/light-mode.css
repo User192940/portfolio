@@ -31,7 +31,7 @@ body {
   overflow: hidden;
 }
 #gmap img{
-  background: url(../img/icons/gmap.webp) no-repeat center / cover;
+  background: url(../../img/icons/gmap.webp) no-repeat center / cover;
 }
 
 #gmap span {

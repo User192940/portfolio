@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title id="title">Validation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Validation</h1>
+      </header>
+      <section>
+        <h2>Input Form</h2>
+        <form novalidate id="form" method="post" action="//example.com">
+          <fieldset>
+            <legend style="color: white">Inputs</legend>
+            <p>
+              <label for="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+              />
+              <br />
+            </p>
+            <p>
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" />
+              <br />
+            </p>
+            <p>
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" />
+              <br />
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Select</legend>
+            <p>
+              <label for="vehicle">Please select a vehicle type</label>
+              <select
+                id="vehicle"
+                name="vehicle"
+                title="Please select something!"
+              >
+                <option value="">Choose Vehicle...</option>
+                <option value="row">SUV</option>
+                <option value="sail">Coupe</option>
+                <option value="speed">Hatchback</option>
+              </select>
+              <br />
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Radio</legend>
+            <p>
+              <span id="gender_id">Please select a gender</span>
+              <br />
+              <input type="radio" id="gender_male" value="male" name="gender" />
+              <label for="gender_male">Male</label>
+
+              <input
+                type="radio"
+                id="gender_female"
+                value="female"
+                name="gender"
+              />
+              <label for="gender_female">Female</label>
+
+              <input
+                type="radio"
+                id="gender_other"
+                value="other"
+                name="gender"
+              />
+              <label for="gender_other">Other</label>
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Checkbox (Multiple)</legend>
+            <p>
+              <span id="travel_span">Please select 4 travel methods</span>
+              <br />
+              <input
+                type="checkbox"
+                class="checkbox"
+                id="spam_email"
+                value="email"
+                name="spam[]"
+              />
+              <label for="spam_email">Train</label>
+
+              <input
+                type="checkbox"
+                class="checkbox"
+                id="spam_phone"
+                value="phone"
+                name="spam[]"
+              />
+              <label for="spam_phone">Plane</label>
+
+              <input
+                type="checkbox"
+                class="checkbox"
+                id="spam_mail"
+                value="mail"
+                name="spam[]"
+              />
+              <label for="spam_mail">Car</label>
+              <input
+                type="checkbox"
+                class="checkbox"
+                id="bus"
+                value="bus"
+                name="spam[]"
+              />
+              <label for="bus">Bus</label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Text Area</legend>
+            <p>
+              <label for="textarea"
+                >Please enter information about yourself</label
+              >
+              <textarea
+                id="textarea"
+                name="textarea"
+                rows="3"
+                cols="40"
+              ></textarea>
+              <br />
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Submit</legend>
+            <p>
+              <input class="submit" type="submit" value="Submit" />
+            </p>
+          </fieldset>
+        </form>
+      </section>
+      <footer>
+        <a class="name" href="">&copy; 2023 - David</a>
+        <a
+          href="javascript:void(location='https://jigsaw.w3.org/css-validator/validator?uri='+escape(location))"
+          >CSS</a
+        >
+        <a
+          href="javascript:void(location='https://validator.w3.org/nu/?doc='+escape(location))"
+          >HTML</a
+        >
+      </footer>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Load jQuery Validate Plugin from a CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"
+      integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="validation.js"></script>
+  </body>
+</html>

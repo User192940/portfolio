@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Responsive Images Docs</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Responsive Images</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="rd1.html">
+                        R&D1
+                    </a>
+                </li>
+                <li>
+                    <a href="rd2.html">
+                        R&D2
+                    </a>
+                </li>
+                <li>
+                    <a href="rd3.html">
+                        R&D3
+                    </a>
+                </li>
+                <li>
+                    <a href="rd4.html">
+                        R&D4
+                    </a>
+                </li>
+                <li>
+                    <a href="rd5.html">
+                        R&D5
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <a href="https://html.com/attributes/img-srcset/#:~:text=The%20srcset%20attribute%20allows%20you,that%20don't%20support%20srcset%20."><h2>src and srcset</h2></a>
+                    <p>
+                        Src is the source of the image. It is the path to the image. Srcset is used for multiple image sizes so that the browser can choose the best image size for the user's device. Doing this saves bandwidth and improves loading times.
+                        in srcset, you specify multiple URL sizes for different widths. Then you specify the base src. The markup looks like this:
+                    </p>
+                        <pre>
+                            <code>
+                                img srcset="
+                                  url size,
+                                  url size,
+                                  url size
+                                 " src="default url"
+                            </code>
+                        </pre>
+                        <p>
+                        In the code above, the browser will choose the image that is closest to the user's device width. If the browser doesn't support srcset, it will use the default URL.
+                    </p>
+            </section>
+            <section>
+                <h2>Sizes</h2>
+                    <p>
+                        If you are using the srcset attribute, sizes are a great way to shorten loading times further. You can specify the size of the image in the markup so that it doesn't have to wait for the CSS to be parsed. 
+                        This is an example of the markup:
+                    </p>
+                        <pre>
+                            <code>
+                                img srcset="/img/html/vangogh-sm.jpg 120w,
+                                            /img/html/vangogh.jpg 193w,
+                                            /img/html/vangogh-lg.jpg 278w"
+                                            sizes="(max-width: 710px) 120px,
+                                            (max-width: 991px) 193px,
+                                            278px"
+                            </code>
+                        </pre>
+                        <p>
+                        In the example above, the browser will choose the image that is 120px wide if the viewport is less than 710px. If the viewport is between 710px and 991px, the browser will choose the 193px wide image. If the viewport is greater than 991px, the browser will choose the 278px wide image.
+                    </p>
+            </section>
+            <section>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">
+                    <h2>Why art direction?</h2>
+                </a>
+                    <p>
+                        Art direction is another way to implement responsive images on your website. You use the picture element with source and img elements as the children. The img element is used as a backup in case of compatibility issues or errors. 
+                        The code would look something like this: 
+                    </p>
+                        <pre>
+                            <code>
+                                >picture>
+                                    >source media="(max-width: 799px)" srcset="ex-480w-close-portrait.jpg" />
+                                    >source media="(min-width: 800px)" srcset="ex-800w.jpg" />
+                                    >img src="ex-800w.jpg" alt="Person standing holding daughter" />
+                                  >/picture>
+                            </code>
+                        </pre>
+                        <p>
+                        Using art direction or any markup is useful because it preloads before the CSS and JS are loaded, which means faster loading times. 
+                    </p>
+            </section>
+            <section>
+                <h2>Summary</h2>
+                <p>
+                    It is important to keep your websites responsive as most people are using phones to access the internet now. The two fastest ways of doing this are srcset and art direction. While using either it is critical to have a default case for compatability issues.
+                </p>
+            </section>
+        </main>
+        <footer>
+            <p>
+                <a href="../../index.html">
+                    &copy; 2023 - David Fedchuk
+                </a>
+                <a href="javascript:void(location='https://jigsaw.w3.org/css-validator/validator?uri='+escape(location))
+                ">CSS</a>
+                <a href="javascript:void(location='https://validator.w3.org/nu/?doc='+escape(location))
+                ">HTML</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
