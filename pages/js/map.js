@@ -71,7 +71,7 @@ function init() {
       lng: lon,
     },
     map: map,
-    animation: google.maps.Animation.DROP,
-    icon: "../../wfed2/portfolio-showcase/js/images/map-marker.png",
+    animation: google.maps?.Animation.DROP,
+    icon: "../images/map-marker.png",
   });
 }
