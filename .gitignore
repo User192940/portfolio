@@ -1,10 +1,5 @@
 node_modules
-php
-wcmd
-web-graphic-design
-wfed2
-javascript
-.vscode
 dist
 website-coding
-
+.*
+!/.gitignore

@@ -1,0 +1,129 @@
+/*
+Theme Name: WCMD Child
+Theme URI: https://dfedchuk5.bitweb1.nwtc.edu
+
+Author: David Fedchuk
+Author URI: https://dfedchuk5.bitweb1.nwct.edu
+
+Description: NWTC Web Contentent Management Design - Web CMD Child Theme
+Tags: two-columns
+
+Template: cool-theme
+
+Version: 999
+
+Requires at least: 5.0
+Tested up to: 6.0
+Requires PHP: 7.0
+
+License: GNU GPU
+License URI: https://www.gnu.org/licenses/gpl-3.0.txt
+
+Text Domain: cool-theme-child
+
+General comments (optional).
+*/
+
+:root {
+    --font-system: head, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+    --color-main: #4D99DB;
+    --color-main-a20: hsla(75, 50%, 50%, .2);
+    --color-main-a40: hsla(75, 50%, 50%, .4);
+    --color-main-a60: hsla(75, 50%, 50%, .6);
+    --color-main-a80: hsla(75, 50%, 50%, .8);
+    --color-font-dark: hsla(75, 50%, 5%), 1;
+    --color-font-light: hsla(0, 0%, 100%, 1);
+    --color-font-light-a40: hsla(0, 0%, 100%, .4);
+    --color-font-light-a60: hsla(0, 0%, 100%, .6);
+    --color-font-light-a80: hsla(0, 0%, 100%, .8);
+    --nav-main-height: 64px;
+    --grid-columns-12: repeat(12, 1fr);
+    --grid-columns-8: repeat(8, 1fr);
+    --grid-gap: 20px;
+    --grid-gap-half: calc(var(--grid-gap) * .5);
+    --action: #00A84C;
+    --gold: #f5c432;
+}
+
+.nav-main-drawer{
+    overflow-y: hidden;
+}
+.wp-block-categories-list{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+.cat-item {
+    margin: .25rem 0;
+}
+.cat-item a{
+    padding: .25rem 0;
+    font-size: 18px;
+}
+.cat-item a:hover{
+    background-color: var(--color-main);
+    padding: .25rem;
+    color:white;
+    text-decoration: none;
+    border-radius: 15%;
+}
+ol.wp-block-latest-comments{
+    padding:0;
+}
+.cards .card-link:hover .card-figure img {
+    filter: grayscale(.2);
+    transform: revert;
+    transition: .1s;
+}
+.cards .card-link:hover .card-figure::after{
+    background: url('../cool-theme/images/noise.webp');
+    content: "";
+    width:100%;
+    height: 100%;
+    z-index: 200;
+    position: absolute;
+    opacity: .10;
+    left:0;
+}
+.card-section-title {
+    display: inline-block;
+    color:#000;
+    text-decoration: none;
+    border-bottom: 0;
+}
+.card-section-title::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #000;
+    transition: width .4s ease-in;
+  }
+  .card-section:hover .card-section-title{
+    border-bottom: none;
+  }
+  .card-section:hover .card-section-title::after {
+    width: 100%;
+  }
+.card-section-button{
+    display:none;
+}
+.splide__toggle{
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    header h1:after {
+        display: none;
+    }
+    header h1 {
+        grid-column: span 12;
+        padding:0!important;
+    }
+    .nav-main ul a:hover, .nav-sub ul a:hover, .nav-main .current-menu-item a, .nav-sub .current-menu-item a {
+        border-bottom-color: #f5c432;
+    }
+    .card:hover .card-section-button{
+        background-color: var(--action);
+        color:white;
+    }
+}

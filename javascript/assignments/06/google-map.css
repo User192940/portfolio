@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    min-height: 100%;
+    margin: 0;
+    background-color:#141418;
+    color:white;
+}
+a:link{
+    color:white;
+}
+a:visited{
+    color: lightblue;
+}
+a:hover{
+    color:lightgreen;
+}
+section{
+    overflow: hidden;
+    margin: 20px;
+    padding:10px;
+    border: 1px solid lightslategrey;
+    background-color:#23232e;
+}
+section h2{
+    margin-left: 1em;
+}
+section ol{
+    margin-left: .7em;
+}
+header {
+    margin-top: 20px;
+    margin: 20px;
+    border: 1px solid lightslategrey;
+    grid-column: span 6;
+    background-color:#23232e;
+}
+header h2, h1{
+    text-align: center;
+}
+.wrapper {
+    margin: 0 .625rem;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+nav,
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    grid-column: span 6;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+nav a,
+footer a {
+    line-height: 2;
+    padding: 0 1em;
+    background: #23232e;
+    margin-left: 0;
+}
+
+nav :first-child,
+footer :first-child {
+    margin-right: auto;
+}
+p,
+li,
+div {
+    line-height: 1.8;
+}
+section p{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+section div{
+    margin-left:40px;
+    margin-right:40px;
+}
+.long{
+    float:left; 
+    margin-left:3rem;
+}
+.lat{
+    float:right; 
+    margin-right:5rem;
+}
+#map{
+    width: 90%; 
+    height: 60vh;
+    margin: auto;
+}
+#loom-companion-mv3{
+    display:none;
+}
+@media screen and (min-width: 768px) {
+    .wrapper {
+        grid-template-columns: repeat(6, 1fr);
+        max-width: 800px;
+        margin: 20px auto;
+    }
+    a:visited:not(.name){
+        color: lightblue;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    header,
+    nav,
+    footer {
+        flex-direction: row;
+    }
+    main {
+        grid-column: span 4;
+    }
+    #map{
+        width: 80%; 
+        height: 400px;
+        margin: auto;
+    }
+    aside {
+        grid-column: span 2;
+    }
+}
