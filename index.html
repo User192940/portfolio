@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="pages/css/plugins/bootstrap-grid.css">
     <!-- font awesome css -->
     <!-- <link rel="stylesheet" href="pages/css/plugins/font-awesome.min.css"> -->
-    <link rel="stylesheet" href="pages/css/light-mode.css">
+    <link rel="stylesheet" href="pages/css/style.css">
     <script src="pages/js/map.js" defer></script>
     <!-- page name -->
     <title>David</title>
@@ -21,18 +21,13 @@
     <!-- wrapper -->
     <div class="mil-wrapper" id="top">
 
-        <!-- preloader -->
-        <div class="mil-preloader-frame">
-        </div>
-        <!-- preloader end -->
-
         <div class="mil-frame">
 
             <!-- top bar -->
             <div class="mil-top-panel">
 
                 <!-- You need to remove the "mil-dot" class if you don't need a dot -->
-                <a href="index.html" class="mil-logo"><span>D</span></a>
+                <a href="#about" class="mil-logo"><span>D</span></a>
 
                 <div class="mil-navigation">
                     <nav id="" class="mil-menu-transition">
@@ -47,7 +42,7 @@
                             <li class="mil-has-children">
                                 <a class="projects-anchor" href="#projects">Projects</a>
                             </li>
-                            <li><a class="contact-anchor" href="#contact">Contact</a></li>
+                            <li><a class="contact-button" href="">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -135,7 +130,7 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="mil-center">
-                                    <h2 class="mil-up mil-mb-30">Hi! My name is David, <br>I’m a web developer based in Green Bay</h2>
+                                    <h2 class="mil-up mil-mb-30">Web developer from Green Bay</h2>
                                     <div class="mil-quote mil-up mil-mb-30"><i class="fas fa-quote-left"></i></div>
                                     <p class="mil-up mil-mb-30">In my free time you can find me at the gym, hiking on trails, or spending time with family and friends. I am also enrolled in NWTC's web developer associate program. I want to develop successful web apps; this website is designed to showcase my skills and projects. </p>
                                     <img src="pages/img/person/sign.png" alt="signature" class="mil-up mil-sign">
@@ -154,6 +149,9 @@
                                 <a href="https://devlaunchers.org/" target="_blank" class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
                                     <div class="mil-cover-frame">
                                         <img src="pages/img/portfolio/devlaunchers-1024.webp" alt="cover" data-swiper-parallax="-130" data-swiper-parallax-scale="1.25">
+                                        <div class="card" onclick="(e) => {e.preventDefault()}">
+                                            <span>&#8505;</span>
+                                        </div>
                                     </div>
                                     <div class="mil-description" data-swiper-parallax-y="-100%" data-swiper-parallax-duration="400">
                                         <h4>Dev Launchers</h4>
@@ -219,7 +217,7 @@
                                         <div class="mil-btn">View Project</div>
                                     </div>
                                 </a>
-                                <a href="https://components-modal--632ca21aeea1618b7fa0bf48.chromatic.com/?path=/docs/components-organisms-modal--docs"  target="_blank" class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
+                                <a id="modal-link" href="https://components-modal--632ca21aeea1618b7fa0bf48.chromatic.com/?path=/docs/components-organisms-modal--docs"  target="_blank" class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
                                     <div class="mil-cover-frame">
                                         <img src="pages/img/portfolio/modal-component.webp" alt="cover" data-swiper-parallax="-130" data-swiper-parallax-scale="1.25">
                                     </div>
@@ -245,10 +243,33 @@
                     <section class="mil-p-90-0">
                         <div>
                             <ul class="mil-puplication-details mil-up mil-mb-90">
-                                <li><span class="mil-upper mil-accent">Write: </span>&nbsp;&nbsp;<span class="mil-upper mil-dark">david.fedchuk@mymail.nwtc.edu</span></li>
+                                <li><span class="mil-upper mil-accent">Write: </span>&nbsp;&nbsp;<span class="mil-upper mil-dark" style="word-break:break-word;">david.fedchuk@mymail.nwtc.edu</span></li>
                             </ul>
                         </div>
-    
+                        <div class="modal-container">
+                            <div class="modal">
+                                <form class="FormRoot">
+                                    <div class="FormField" name="email">
+                                      <div style="display: flex; align-items: baseline; justify-content: space-between;">
+                                        <label class="FormLabel">Email</label>
+                                        <span class="email-message">Please enter your email</span>
+                                      </div>
+                                      <label id="email-error" class="" name="email" for="email"></label>
+                                      <input class="Input" type="email" required />
+                                    </div>
+                                    <div class="FormField">
+                                      <div style="display: flex; align-items: baseline; justify-content: space-between;">
+                                        <label class="FormLabel">Question</label>
+                                        <span id="invalid" name="question" class="invalid"></span>
+                                      </div>
+                                      <textarea class="Textarea" required></textarea>
+                                    </div>
+                                    <button class="Button" style="margin-top: 10px;">
+                                      Post question
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
                         <!-- map -->
                         <div id="gmap" class="mil-map mil-mb-90">
                             
@@ -269,6 +290,7 @@
         <!-- content -->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
     <script src="pages/js/main.js"></script>
     <!-- wrapper end -->
 
