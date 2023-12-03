@@ -75,7 +75,7 @@ main{
     height: calc(100vh - 4rem);
     min-height: 600px;
     width: 100%;
-    background: url(images/home-background.jpg);
+    background: url(images/home-background.webp);
     background-position: right 40% top;
     background-repeat: no-repeat;
     background-size: cover;
