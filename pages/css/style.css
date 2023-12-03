@@ -1576,6 +1576,7 @@ puplication details
   }
   .mil-puplication-details li:last-child {
     margin-bottom: 0;
+    flex-wrap: wrap;
   }
 }
 .project-skills-span{
