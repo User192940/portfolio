@@ -1,7 +1,59 @@
 $(function () {
-
     "use strict";
-
+    $(document).ready(function() {
+        $('.contact-button').click(function (event) {
+            event.preventDefault();
+            $('.mil-menu-btn').toggleClass('mil-active');
+            $('.mil-navigation').toggleClass('mil-active');
+        }); 
+        // Button click event
+        $(".contact-button").click(function(e) {
+            // Open the modal
+            e.stopPropagation();
+            $(".modal-container").css("display", "flex");
+            $("body").css("overflow-y", "hidden");
+        });
+    
+        // Close the modal when clicking outside of it
+        $(window).click(function(event) {
+            if (!$(event.target).closest('.FormRoot').length) {
+                $(".modal-container").hide();
+                $("body").css("overflow-y", "unset");
+            }
+            if (!$(event.target).closest('.mil-navigation').length) {
+                $('.mil-menu-btn').removeClass('mil-active');
+                $('.mil-navigation').removeClass('mil-active');
+            }
+        });
+    });
+    $(".FormRoot").validate({
+        errorPlacement: function(error, element) {
+            var prevElement = $(element).prev();
+            if (prevElement.attr("name") == "email"
+                || prevElement.attr("name") == "question") {
+                    error.appendTo(prevElement);
+            }
+        },
+        success: function(label) {
+            label.removeClass("error");
+        },
+        highlight: function(element, errorClass) {
+            var prevElement = $(element).prev();
+            prevElement.addClass("error-parent");
+            prevElement.find(".email-message").fadeOut(function() {
+                $(this).fadeIn();
+            });
+        },
+        rules: {
+            email: {
+                required: 'Please enter your email',
+                email: true
+            },
+            questions: {
+                required: 'Please enter a question'
+            }
+        }
+    });
     function initMap() {
         const myLatLng = {
           lat: 44.513458251953125,
@@ -27,14 +79,17 @@ $(function () {
     ***************************/
     $(document).on('click', 'a[href^="#"]', function (event) {
         event.preventDefault();
-
+        $('.mil-menu-btn').toggleClass('mil-active');
+        $('.mil-navigation').toggleClass('mil-active');
         var target = $($.attr(this, 'href'));
         var offset = 90;
 
-        $('html, body').animate({
-            scrollTop: target.offset().top - offset
-        }, 400);
+            $('html, body').animate({
+                scrollTop: target.offset().top - offset
+            }, 400);
     });
+
+    
     /***************************
 
     back to top
@@ -63,9 +118,10 @@ $(function () {
     navigation
 
     ***************************/
-    $(".mil-menu-btn").on("click", function () {
+    $(".mil-menu-btn").on("click", function (e) {
         $(this).toggleClass('mil-active');
         $('.mil-navigation').toggleClass('mil-active');
+        e.stopPropagation();
     });
 
     function createAnimation(element) {
