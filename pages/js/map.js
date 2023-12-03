@@ -72,6 +72,6 @@ function init() {
     },
     map: map,
     animation: google.maps?.Animation.DROP,
-    icon: "../images/map-marker.png",
+    icon: "/pages/js/images/map-marker.png",
   });
 }

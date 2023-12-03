@@ -168,7 +168,7 @@ function init() {
         },
         map: map,
         animation: google.maps.Animation.DROP,
-        icon: "/wfed2/portfolio-showcase/js/images/map-marker.png",
+        icon: "./images/map-marker.png",
     });
 
     var infowindow = new google.maps.InfoWindow({
