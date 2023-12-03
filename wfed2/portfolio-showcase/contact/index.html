@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://instructure-uploads-pdx.s3.us-west-2.amazonaws.com/account_211720000000000001/attachments/12223/favicon.ico" />
+    <link href='https://fonts.googleapis.com/css?family=Allerta+Stencil' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/screen.css"> 
+    <script src="../js/script.js" defer></script>
+    <title>Portfolio Showcase</title>
+</head>
+<body class="contact">
+    <a style="position: absolute; left: -500px;" href="#main-content">Skip to main content.</a>
+    <div class="wrapper">
+        <nav>
+            <ul class="navbar">
+                <li>
+                    <a href="../index.html">
+                        <img src="../images/nwtc-banner.png" alt="NWTC Banner"/>
+                    </a>
+                </li>
+                <li class="li-">
+                    <a href="">
+                        2023 Fall DA Showcase
+                    </a>
+                </li>
+                <li class="li-2">
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+                <li class="">
+                    <a href="../programs/index.html">
+                        Programs
+                    </a>
+                </li>
+                <li class="">
+                    <a href="index.html" style="text-decoration: underline;text-underline-position: from-font;">
+                        Contact
+                    </a>
+                </li>
+                <li class="">
+                    <a href="../archive/index.html">
+                        Archive
+                    </a>
+                </li>
+            </ul>
+            <button class="nav-main-menu-toggle" aria-label="Open Menu" aria-controls="nav-main-menu" aria-expanded="false">
+                <svg viewBox="0 0 48 48" width="48" height="48">
+                    <rect x="6" y="12" width="36" height="4" rx="2" fill="white"></rect>
+                    <rect x="6" y="22" width="36" height="4" rx="2" fill="white"></rect>
+                    <rect x="6" y="32" width="36" height="4" rx="2" fill="white"></rect>
+                </svg>
+            </button>
+            <ul id="nav-main-menu" hidden>
+                <li class="li-2">
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="../programs/index.html">
+                        Programs
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        Contact
+                    </a>
+                </li>
+                <li>
+                    <a href="../archive/index.html">
+                        Archive
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        <header>
+            <h1>Website Design, Fall 2023</h1>
+        </header>
+        <main id="main-content" style="height: auto;">
+            <section class="container">
+                <div class="grid-12-span-9">
+                    <div id="gmap">
+                    </div>
+                    
+                    <form class="expanded row clearfix" method="post">
+                        <fieldset>
+                            <legend><h2>Contact Us</h2></legend>
+                        <ol class="grid-8">
+                            <li class="grid-8-span-1-4">
+                                <label for="name-first">First Name</label>
+                                <input id="name-first" name="name-first" required="" placeholder="Enter your first name">
+                                <label aria-hidden="true">Looks Good!</label>
+                            </li>
+                            <li class="grid-8-span-4-8">
+                                <label for="name-last">Last Name</label>
+                                <input id="name-last" name="name-last" required="" placeholder="Enter your last name">
+                                <label aria-hidden="true">Good!</label>
+                            </li>
+                            <li class="grid-8-span-8">
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email" required="" placeholder="Enter your email address">
+                                <label aria-hidden="true">Email Valid!</label>
+                            </li>
+                            <li class="grid-8-span-8">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required="" placeholder="Enter your message"></textarea>
+                                <label aria-hidden="true">Roger that!</label>
+                            </li>
+                            <li class="grid-8-span-4-8">
+                                <input name="submit" id="submit" type="submit" value="Contact Us">
+                            </li>
+                        </ol>
+                    </fieldset>
+                    </form>
+                </div>
+                <div class="grid-12-span-9-13">
+                    <h2>Directions</h2>
+                <form action="https://maps.google.com/maps">
+                    <div class="directions-form">
+                        <label class="" for="saddr">Enter Your Address or Zip Code</label>
+                        <input class="saddr" id="saddr" name="saddr" required="" placeholder="Enter Your Address or Zip Code">
+                        <input type="hidden" name="daddr" value="2740 West Mason Street, Green Bay, WI">
+                        <input class="" type="submit" value="Go">
+                    </div>
+                </form>
+                </div>
+                <footer style="position: relative; align-self: end;">
+                        <a href="../../index.html">
+                            &copy; 2023 - David Fedchuk
+                        </a>
+                        <a href="javascript:void(location='https://jigsaw.w3.org/css-validator/validator?uri='+escape(location))
+                        ">CSS</a>
+                        <a href="javascript:void(location='https://validator.w3.org/nu/?doc='+escape(location))
+                        ">HTML</a>
+                </footer>
+            </section>
+        </main> 
+    </div> 
+</body>
+</html>

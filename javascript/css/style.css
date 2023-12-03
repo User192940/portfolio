@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: minmax(auto, 1024px);
+    justify-content: center;
+    margin: 0 10px;
+}
+
+section{
+    margin-top: 50px;
+    grid-column: span 6;
+    border: 1px solid lightslategrey;
+}
+section h2{
+    margin-left: 1em;
+}
+section ol{
+    margin-left: .7em;
+}
+header {
+    margin-top: 50px;
+    border: 1px solid lightslategrey;
+    grid-column: span 6;
+}
+header h2, h1{
+    text-align: center;
+}
+.wrapper {
+    display: grid;
+    gap: 20px
+}
+
+nav,
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    grid-column: span 6;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+nav a,
+footer a {
+    line-height: 2;
+    padding: 0 1em;
+    background: lightgray;
+    margin-left: 0;
+}
+
+nav :first-child,
+footer :first-child {
+    margin-right: auto;
+}
+p,
+li {
+    line-height: 1.8;
+}
+section p{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    header,
+    nav,
+    footer {
+        flex-direction: row;
+    }
+    main {
+        grid-column: span 4;
+    }
+
+    aside {
+        grid-column: span 2;
+    }
+}

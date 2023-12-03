@@ -1,0 +1,136 @@
+:root{
+    --text: #000000;
+    --background: #ffffff;
+    --primary: #8fb3ff;
+    --secondary: #ebf1ff;
+    --accent: #d41d6c;
+}
+
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body{
+    margin: 0;
+  }
+  .wrapper{
+    width: 100%;
+    padding: 0 10px;
+  }
+  .topbar{
+    position: relative;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary);
+    border-bottom: 1px solid lightgrey;
+}
+.topbar div{
+    width: 100%;
+}
+.topbar ul{
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.topbar li{
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.topbar a{
+    width: 100%;
+    font-size: larger;
+    text-decoration: none;
+    color: var(--text);
+}
+main{
+  margin-top: 1rem;
+}
+section a{
+  color: #720e9e;
+}
+section a:hover h2{
+  background-color: #720e9e;
+  color:white;
+}
+footer{
+  display: flex;
+}
+.left-anchor{
+  margin-left: auto;
+}
+footer a{
+  padding: 1rem;
+}
+a{
+  text-decoration: none;
+  color: #720e9e;
+}
+main a{
+  display: block;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+a:hover{
+  background-color: #720e9e;
+  color:white;
+}
+@media (width>=768px) {
+  .wrapper{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.5;
+    padding: 0 10px;
+    background-color: var(--secondary);
+  }
+  nav.topbar{
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary);
+    border-bottom: 1px solid lightgrey;
+      }
+      .topbar ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        height: 100%;
+        margin: 0;
+        list-style: none;
+      }
+        li{
+        padding: 1rem;
+      }
+      li a{
+        text-decoration: none;
+      }
+      main{
+       margin-top: 1rem;
+      }
+      header{
+        margin-top: 4rem;
+      }
+}

@@ -1,0 +1,729 @@
+:root{
+    --text: #000000;
+    --background: #ffffff;
+    --primary: #8fb3ff;
+    --secondary: #ebf1ff;
+    --accent: #d41d6c;
+}
+#loom-companion-mv3{
+    display: none;
+}
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+  }
+.wrapper{
+    width:95%;
+    margin: 0 auto;
+    padding: 0;
+}
+ul.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    justify-content: space-between;
+    padding: 1rem;
+}
+ul.cards li{
+    width: 48%;
+    height: auto;
+    padding: 12px;
+    border: 1px solid hsl(155.48deg 40.11% 27.08%);
+    border-radius: 1%;;
+}
+ul.cards li:not(.row1){
+    margin-top: 4%;
+}
+section{
+    padding: 1rem 0;
+}
+footer p{
+    width: 100%;
+    display: flex;
+}
+section a{
+    text-decoration: none;
+}
+/* website design homepage start */
+.wfed {
+    background-color: hsl(153.75deg 80% 96.08%);
+}
+.wfed .wrapper {
+    background-color: hsl(156deg 23.81% 95.88%);
+}
+.wfed h1 {
+    margin:0;
+    padding: .67em;
+}
+.wfed header, nav, main {
+    padding: 10px;
+}
+.wfed header {
+    position: relative;
+    height: 200px;
+}
+.wfed header a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 2;
+}
+.wfed section img {
+    float: right;
+    padding: 10px;
+    margin: 0 0 12px 12px;
+    background-color: hsl(155deg 39.34% 76.08%);
+    border: 1px solid hsl(155.48deg 40.11% 27.08%);
+}
+.wfed main p {
+    margin: 12px 0;
+}
+.wfed main h2 {
+    margin: 12px 0;
+    clear: none;
+}
+.wfed li:nth-child(1) header{
+    background-image: url(images/envy-review.webp);
+    background-size: cover;
+    padding: 0;
+}
+.wfed li:nth-child(2) header{
+    background-image: url(images/veerle-review.webp);
+    background-size: cover;
+    padding: 0;
+}
+.wfed li{
+    list-style: none;
+}
+.wfed li:nth-child(2){
+    margin-left: auto;
+}
+.wfed li header h2{
+    text-align: center;
+    background-color: white;
+    opacity: 80%;
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+}
+.wfed li a{
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+.wfed footer a {
+    float: left;
+}
+
+.wfed a[href^=javascript] {
+    float: right;
+}
+
+.wfed nav {
+    height: auto;
+}
+
+.wfed nav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+.wfed a {
+    color: hsl(155.48deg 40.11% 27.08%);
+    text-decoration: none;
+}
+.wfed a:visited {
+    color: hsl(155.48deg 40.11% 27.08%);
+}
+
+.wfed a:hover {
+    color: white;
+    background-color: hsl(155.48deg 39.57% 46.08%);
+}
+
+.wfed h1 {
+    color: hsl(155.48deg 40.11% 27.08%);
+}
+
+.wfed section h2 {
+    color: hsl(155.48deg 40.11% 27.08%);
+}
+
+.wfed p {
+    line-height: 1.5;
+}
+
+.wfed footer p {
+    height: 40px;
+    margin: 0;
+}
+.wfed p a{
+    padding: 10px;
+}
+
+.wfed .wrapper {
+    background-color: #fbfaf8;
+}
+/* website design homepage end */
+
+/* web-reviews start */
+.reviews {
+    background-color: hsl(153.75deg 80% 96.08%);
+}
+.reviews .wrapper {
+    background-color: hsl(156deg 23.81% 95.88%);
+}
+.reviews h1{
+    margin:0;
+    padding: .67em;
+}
+.reviews header, nav, main {
+    padding: 1rem;
+}
+.reviews header {
+    position: relative;
+    height: 200px;
+}
+.reviews header a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 2;
+}
+.reviews section img {
+    float: right;
+    padding: 10px;
+    margin: 0 0 12px 12px;
+    background-color: hsl(155deg 39.34% 76.08%);
+    border: 1px solid hsl(155.48deg 40.11% 27.08%);
+}
+.reviews main p {
+    margin: 12px 0;
+}
+.reviews main h2 {
+    margin: 0;
+    clear: none;
+    color: hsl(155.48deg 40.11% 27.08%);
+}
+.reviews li:nth-child(1) header{
+    background-image: url(images/envy-review.webp);
+    background-size: cover;
+    padding: 0;
+}
+.reviews li:nth-child(2) header{
+    background-image: url(images/veerle-review.webp);
+    background-size: cover;
+    padding: 0;
+}
+.reviews li:nth-child(3) header{
+    background-image: url(images/copilot-review.webp);
+    background-size: cover;
+    padding: 0;
+}
+.reviews li:nth-child(4) header{
+    background-image: url(images/portfolio-showcase.webp);
+    background-size: cover;
+    padding: 0;
+}
+.reviews li header h2{
+    text-align: center;
+    background-color: white;
+    opacity: 80%;
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+}
+.reviews li a{
+    display: flex;
+    padding: 10px 0;
+}
+.reviews .cards li a {
+    justify-content: end;
+}
+.reviews footer a {
+    float: left;
+}
+
+.reviews a[href^=javascript] {
+    float: right;
+}
+
+.reviews nav {
+    height: auto;
+    padding: 1rem;
+}
+
+.reviews nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+.reviews ul li {
+    padding: 10px;
+}
+
+.reviews ul li:nth-child(2) {
+    margin-left: auto;
+}
+
+.reviews a {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: hsl(155.48deg 40.11% 27.08%);
+}
+
+.reviews a:visited {
+    color: hsl(155.48deg 40.11% 27.08%);
+}
+
+.reviews a:hover {
+    color: white;
+    background-color: hsl(155.48deg 39.57% 46.08%);
+}
+
+.reviews h1 {
+    color: hsl(155.48deg 40.11% 27.08%);
+}
+
+.reviews section h2 {
+    color: hsl(155.48deg 40.11% 27.08%);
+}
+
+.reviews p {
+    line-height: 1.5;
+}
+
+.reviews footer p {
+    height: 40px;
+    margin-bottom: 0;
+}
+
+.reviews .wrapper {
+    background-color: #fbfaf8;
+}
+/* web-reviews end */
+/* envy start */
+.envy{
+    background-color: hsl(153.75deg 80% 96.08%);
+}
+.envy .wrapper{
+    background-color: hsl(156deg 23.81% 95.88%);
+}
+.envy header, nav, main {
+    padding: 10px;
+}
+.envy header{
+    position: relative;
+    height: 120px;
+    background-image: url(images/envy-header.webp);
+    background-position: 50%;
+    background-size:cover;
+}
+.envy header a{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 2;
+}
+.envy section img{
+    float: right; 
+    padding: 10px;
+    margin: 0 0 12px 12px;
+    background-color: hsl(155deg 39.34% 76.08%);
+    border: 1px solid hsl(155.48deg 40.11% 27.08%);
+}
+.envy main p{
+    margin: 12px 0;
+}
+.envy main h2{
+    margin: 12px 0;
+    clear: none;
+}
+.envy footer a{
+    float: left;
+}
+.envy a[href^=javascript]{
+    float: right;
+}
+.envy nav{
+    height: auto;
+}
+.envy nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+.envy ul li{
+    padding: 10px 0;
+}
+.envy ul li:nth-child(2){
+    margin-left: auto;
+}
+.envy a {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: hsl(155.48deg 40.11% 27.08%);
+}
+.envy a:visited{
+    color: hsl(155.48deg 40.11% 27.08%);
+}
+.envy a:hover{
+    color: white;
+    background-color: hsl(155.48deg 39.57% 46.08%);
+}
+.envy h1{
+    color: hsl(155.48deg 40.11% 27.08%);
+}
+.envy section h2{
+    color: hsl(155.48deg 40.11% 27.08%);
+}
+.envy p{
+    line-height: 1.5;
+}
+.envy footer p{
+    height: 40px;
+    margin-bottom: 0;
+}
+/* end envy */
+/* start veerle css */
+.veerle{
+    background-color: hsla( 4 , 76%, 96%, 1);
+}
+.veerle header, nav, main {
+    padding: 10px;
+}
+.veerle header{
+    position: relative;
+    height: 200px;
+}
+.veerle header a{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 2;
+}
+body.veerle header {
+    background-image: url(images/header-veerle.webp);
+    background-position: 50%;
+    background-size:cover;
+}
+.veerle section img{
+    float: right; 
+    padding: 10px;
+    background-size: cover;
+    border: 1px solid hsl(2.61deg 38.98% 46.27%);
+    margin: 0 0 12px 12px;
+    background-color: hsl(2.95deg 96.83% 75.29%);
+}
+.veerle main p{
+    margin: 12px 0;
+}
+.veerle main h2{
+    margin: 12px 0;
+    clear: none;
+}
+.veerle footer{
+    height: 40px;
+}
+.veerle footer a{
+    float: left;
+}
+.veerle a[href^=javascript]{
+    float: right;
+}
+.veerle nav{
+    height: auto;
+}
+.veerle nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+.veerle ul li{
+    padding: 10px 0;
+}
+.veerle ul li:nth-child(2){
+    margin-left: auto;
+}
+.veerle a {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ff5a91;
+}
+.veerle a:visited{
+    color: #ff5a91;
+}
+.veerle a:hover{
+    color: white;
+    background-color: #ff5a91;
+}
+.veerle h1{
+    color: #7e4b71;
+}
+.veerle section h2{
+    color: #81adcc;
+}
+.veerle p{
+    line-height: 1.5;
+}
+.veerle footer p{
+    height: 40px;
+}
+.veerle .wrapper {
+    background-color: #fbfaf8;;
+}
+/* veerle end */
+
+/* copilot css start*/
+.copilot header, nav, main{
+    padding: 10px;
+}
+.copilot header{
+    position: relative;
+    height: 200px;
+}
+.copilot header a{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 2;
+    color: white;
+}
+.copilot header a:hover{
+    background-color: white;
+    opacity: 60%;
+}
+body.copilot header {
+    background-image: url(images/copilot-small-header.webp);
+    background-size:cover;
+    background-position: center;
+}
+.copilot section img{
+    float: none; 
+    padding: 10px;
+    border: 1px solid black;
+    background-color: #485354;
+}
+.copilot main p{
+    margin: 12px 0;
+    color: lightgrey;
+}
+.copilot main h2{
+    margin: 12px 0;
+    clear: none;
+}
+.copilot footer{
+    padding: 0 0 6px 0;
+    margin: 0;
+    color: lightgrey;
+    height: 40px;
+}
+.copilot footer a{
+    float: left;
+}
+.copilot a[href^=javascript]{
+    float: right;
+}
+.copilot nav{
+    height: auto;
+}
+.copilot nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+.copilot ul li{
+    padding: 10px 0;
+}
+.copilot ul li:nth-child(2){
+    margin-left: auto;
+}
+.copilot a {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: lightgrey;
+}
+.copilot a:visited{
+    color: lightgrey;
+}
+.copilot a:hover{
+    color: #1f6feb;
+    text-decoration: underline;
+}
+.copilot h1{
+    color: white;
+}
+.copilot section h2{
+    color: white;
+}
+.copilot p{
+    line-height: 1.5;
+    margin: 0;
+}
+.copilot footer p{
+    height: 40px;
+}
+.copilot {
+    background: linear-gradient(to bottom, #2a2342, #1e202a);
+}
+/* end copilot css */
+
+/* header star ratings */
+section h2 {
+    clear: both;
+    margin: 24px 0 6px;
+    position: relative;
+    overflow: hidden;
+    line-height: 24px;
+}
+[class*=stars]:before {
+    position: relative;
+    z-index: 1;
+    display: block;
+    float: left;
+    animation-name: fadeInSlideInLeft;
+    animation-duration: 2000ms;
+}
+
+[class*=stars]:after {
+    content: '✪✪✪✪✪';
+    color: rgba(167, 167, 167, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.stars-5:before {
+    content: '✪✪✪✪✪';
+    padding-right: 10px;
+}
+
+.stars-4:before {
+    content: '✪✪✪✪';
+    padding-right: 32px;
+}
+
+.stars-3:before {
+    content: '✪✪✪';
+    padding-right: 54px;
+}
+
+.stars-2:before {
+    content: '✪✪';
+    padding-right: 76px;
+}
+
+.stars-1:before {
+    content: '?';
+    padding-right: 98px;
+}
+
+.stars-1:after {
+    content: '????';
+    color: rgba(167, 167, 167, 0.1);
+}
+/* end star ratings css*/
+@keyframes slidein{
+    /* 0% {
+        transform: translateX(-100%);
+    } */
+
+    100% {
+        left: 0;
+    }
+}
+#slidein{
+    left: -1000px;
+    animation: slidein 1s forwards;
+}
+#slidein2{
+    left: -1000px;
+    animation: slidein 1s 1.5s forwards;
+}
+#slidein3{
+    left: -1000px;
+    animation: slidein 1s 3s forwards;
+}
+@media (width>=800px) {
+    .wrapper{
+        width: 800px;
+        margin: 0 auto;
+    }
+    .envy header{
+        height: 200px;
+    }
+    .veerle a{
+        color: #ff5a91;
+        padding: 10px;
+    }
+    .veerle a:hover{
+        color: white;
+        background-color: #ff5a91;
+    }
+    /* end veerle */
+
+    /* start copilot */
+    body.copilot header {
+        background-image: url(images/copilot-header.webp);
+        background-size:cover;
+        background-position: center;
+    }
+    .copilot section img{
+        float: right; 
+        padding: 10px;
+        border: 1px solid black;
+        margin: 0 0 12px 12px;
+        background-color: #485354;
+    }
+    footer a:nth-child(2){
+        margin-left: auto;
+    }
+    footer a:nth-child(3){
+        margin-left: 8px;
+    }
+}

@@ -1,0 +1,67 @@
+#loom-companion-mv3{
+    display: none;
+}
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+  }
+.wrapper{
+    width:95%;
+    margin: 0 auto;
+    padding: 0;
+}
+section{
+    padding: 1rem 0;
+}
+footer p{
+    width: 100%;
+    display: flex;
+}
+section a{
+    text-decoration: none;
+    height: 47px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+ul li{
+    padding: 10px;
+}
+a h2{
+    margin: 0;
+}
+a {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+ul li:nth-child(2){
+    margin-left: auto;
+}
+@media (width>=800px) {
+    .wrapper{
+        width: 800px;
+        margin: 0 auto;
+    }
+    .topbar ul{
+        width: 40%;
+        justify-content: end;
+    }
+    footer a:nth-child(2){
+        margin-left: auto;
+    }
+    footer a:nth-child(3){
+        margin-left: 8px;
+    }
+}

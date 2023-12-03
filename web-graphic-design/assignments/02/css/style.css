@@ -1,0 +1,184 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+ul,
+ol {
+    padding-left: 0;
+    list-style: none;
+}
+
+sup {
+    line-height: 0;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+html {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    background: url(images/bubbles-svgrepo-com\ \(1\).svg) repeat-x fixed,
+        url(images/bubbles-svgrepo-com\ \(1\).svg) repeat-x left bottom,
+        linear-gradient(0deg, rgba(14,1,79,1) 0%, rgba(193,48,205,1) 95%) fixed;
+}
+
+.container {
+    margin: 0 .625rem;
+    overflow: hidden;
+}
+
+.wrapper {
+    border: 2px solid white;
+    border-radius: 10px;
+    background: #393B3D;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header {
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin: 20px;
+    background: url(images/Top\ Shelf.svg) no-repeat top left / 100px 40px,
+    url(images/sale-svgrepo-com\ \(1\).svg) no-repeat top 5px right 5px / 50px 50px,
+    url(images/wine.webp) no-repeat center center / cover,
+        linear-gradient(0deg, rgba(14,1,79,1) 0%, rgba(193,48,205,1) 95%) fixed;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+header h1 {
+    line-height: 4;
+    text-align: center;
+    flex: 1 0 auto;
+    margin: 0;
+    color: #fff;
+    font-family: "Myriad Pro Regular", sans-serif;
+    font-weight: 200;
+    letter-spacing: 4px;
+    text-shadow: 0 -2px 2px rgba(0, 0, 0, 0.6);
+    background: transparent linear-gradient(to bottom,
+            hsla(218, 62%, 80%, 0.7) 1px,
+            hsla(276, 72%, 50%, 0.7) 2px,
+            rgb(18, 8, 73));
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+header h1 sup {
+    font-size: .6em;
+}
+
+section {
+    overflow: hidden;
+    margin: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+    background: #fff linear-gradient(to bottom, rgba(0, 0, 0, 0.80) 0%, rgba(255, 255, 255, 0.60) 5%, rgba(255, 255, 255, 1) 20%);
+}
+
+h2 {
+    margin: 24px 0 6px;
+}
+
+p {
+    margin: 0 0 16px;
+    line-height: 1.4;
+    text-indent: 12px;
+}
+
+img {
+    width: 100%;
+}
+
+footer {
+    clear: both;
+    overflow: auto;
+    margin: 0 20px;
+    padding: 0 0 20px;
+    color: #fff;
+}
+
+footer a[href^=javascript] {
+    position: relative;
+    color: #000;
+    display: block;
+    line-height: 2em;
+    font-size: 0.625em;
+    background-color: #fff;
+    border-radius: 3px;
+    margin: 0 0 0 10px;
+    padding: 0 10px;
+    float: right;
+    text-decoration: none;
+    box-shadow: 0 2px 2px #000;
+}
+
+footer a[href^=http]:active {
+    top: 2px;
+    box-shadow: none;
+}
+
+
+/*
+Start Media Query
+    if screen is 48rem or larger (can use px or em)
+    rem is based on font size of root element
+        (16px * 48 = 768)
+    use the following rules
+*/
+
+@media (min-width: 48rem) {
+    .container {
+        width: 96%;
+        max-width: 800px;
+        margin: 20px auto;
+    }
+
+    header {
+        height: 400px;
+        background: url(images/Top\ Shelf.svg) no-repeat top right / 200px 80px,
+        url(images/sale-svgrepo-com\ \(1\).svg) no-repeat top 10px left 10px / 150px 150px,
+        url(images/wine.webp) no-repeat center center / cover,
+        linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 95%) fixed;
+    }
+
+    header h1 {
+        line-height: 2;
+        font-size: 2.75em;
+        align-self: flex-end;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+
+    }
+
+    img {
+        width: 175px;
+        height: auto;
+        float: right;
+        margin: 0 0 2px 4px;
+    }
+}
