@@ -146,24 +146,26 @@
                     <section class="mil-p-90-60">
                         <div class="row">
                             <div class="col-lg-12">
-                                <a href="https://devlaunchers.org/" target="_blank" class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
-                                    <div class="mil-cover-frame">
-                                        <img src="pages/img/portfolio/devlaunchers-1024.webp" alt="cover" data-swiper-parallax="-130" data-swiper-parallax-scale="1.25">
-                                        <div class="card" onclick="(e) => {e.preventDefault()}">
-                                            <span>&#8505;</span>
-                                        </div>
+                                <div class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
+                                    <div class="card dev-launch" id="dev-launch-info">
+                                        <span>&#8505;</span>
                                     </div>
-                                    <div class="mil-description" data-swiper-parallax-y="-100%" data-swiper-parallax-duration="400">
-                                        <h4>Dev Launchers</h4>
-                                        <div class="project-skills">
-                                            <span class="project-skills-span">React</span>
-                                            <span class="project-skills-span">Tailwind</span>
-                                            <span class="project-skills-span">Figma</span>
-                                            <span class="project-skills-span">NextJS</span>
+                                    <a href="https://devlaunchers.org/" target="_blank" class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
+                                        <div class="mil-cover-frame">
+                                            <img src="pages/img/portfolio/devlaunchers-1024.webp" alt="cover" data-swiper-parallax="-130" data-swiper-parallax-scale="1.25">
                                         </div>
-                                        <div class="mil-btn">View Project</div>
-                                    </div>
-                                </a>
+                                        <div class="mil-description" data-swiper-parallax-y="-100%" data-swiper-parallax-duration="400">
+                                            <h4>Dev Launchers</h4>
+                                            <div class="project-skills">
+                                                <span class="project-skills-span">React</span>
+                                                <span class="project-skills-span">Tailwind</span>
+                                                <span class="project-skills-span">Figma</span>
+                                                <span class="project-skills-span">NextJS</span>
+                                            </div>
+                                            <div class="mil-btn">View Project</div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -175,6 +177,10 @@
                     <section class="mil-p-90-60">
                         <div class="row">
                             <div class="col-lg-12">
+                                <div class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
+                                    <div class="card" id="netclips-info">
+                                        <span>&#8505;</span>
+                                    </div>
                                 <a href="build/index.html"  target="_blank" class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
                                     <div class="mil-cover-frame">
                                         <img src="pages/img/portfolio/netflix-1024.webp" alt="cover" data-swiper-parallax="-130" data-swiper-parallax-scale="1.25">
@@ -190,6 +196,11 @@
                                         <div class="mil-btn">View Project</div>
                                     </div>
                                 </a>
+                            </div> 
+                            <div class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
+                                <div class="card" id="showcase-info">
+                                    <span>&#8505;</span>
+                                </div>
                                 <a href="wfed2/portfolio-showcase/index.html"  target="_blank" class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
                                     <div class="mil-cover-frame">
                                         <img src="pages/img/portfolio/portfolio-showcase.jpg" alt="cover" data-swiper-parallax="-130" data-swiper-parallax-scale="1.25">
@@ -204,6 +215,11 @@
                                         <div class="mil-btn">View Project</div>
                                     </div>
                                 </a>
+                            </div>
+                            <div class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
+                                <div class="card" id="wordpress-info">
+                                    <span>&#8505;</span>
+                                </div>
                                 <a href="" onclick="window.open('https://dfedchuk.bitweb1.nwtc.edu/webmgmt/');" class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
                                     <div class="mil-cover-frame">
                                         <img src="pages/img/portfolio/nwtc-1024.webp" alt="cover" data-swiper-parallax="-130" data-swiper-parallax-scale="1.25">
@@ -217,6 +233,7 @@
                                         <div class="mil-btn">View Project</div>
                                     </div>
                                 </a>
+                            </div>
                                 <a id="modal-link" href="https://components-modal--632ca21aeea1618b7fa0bf48.chromatic.com/?path=/docs/components-organisms-modal--docs"  target="_blank" class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
                                     <div class="mil-cover-frame">
                                         <img src="pages/img/portfolio/modal-component.webp" alt="cover" data-swiper-parallax="-130" data-swiper-parallax-scale="1.25">
@@ -268,6 +285,86 @@
                                       Post question
                                     </button>
                                 </form>
+                            </div>
+                        </div>
+                        <div class="info-modal-container" id="dl-modal-container">
+                            <div class="info-modal">
+                                <h2>Tasks</h2>
+                                <ul>
+                                    <li>
+                                        Develop reusable UI components using React, Tailwind, and Typescript 
+                                    </li>
+                                    <li>Participate in monthly sprints as a part of Agile methodologies</li>
+                                    <li>Create pages based on Figma components from the UI team
+                                    </li>
+                                    <li>
+                                        Maintain and update UI components
+                                    </li>
+                                    <li>Deploy project implementations and updates using Git
+                                    </li>
+                                    <li>Track tasks and team progress using ZenHub
+                                    </li>
+                                    <li>Create stories on Storybook for testing and documentation
+                                    </li>
+                                </ul>
+                                <h2>Recent Work</h2>
+                                <ul>
+                                    <li>                                
+                                        <a target="_blank" href="https://components-modal--632ca21aeea1618b7fa0bf48.chromatic.com/?path=/docs/components-organisms-modal--docs" style="color: rgb(71 105 188)">Modal</a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="https://notification-feature--632ca21aeea1618b7fa0bf48.chromatic.com/?path=/story/notification-feature--primary" style="color: rgb(71 105 188)">Notification Page</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info-modal-container" id="netclips-modal-container">
+                            <div class="info-modal">
+                                <h2>About the Site</h2>
+                                <ul>
+                                    <li>
+                                        Authenticate users using Firebase
+                                    </li>
+                                    <li>
+                                        Store favorite movies to database
+                                    </li>
+                                    <li>
+                                        Access movie images using movieDB
+                                    </li>
+                                    <li>
+                                        Grab trailors using embeded youtube link and information from movieDB json object
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info-modal-container" id="shopify-modal-container">
+                            <div class="info-modal">
+                                <h2>About the Site</h2>
+                                <ul>
+                                    <li>
+                                        Update/maintain UI components 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info-modal-container" id="showcase-modal-container">
+                            <div class="info-modal">
+                                <h2>About the Site</h2>
+                                <ul>
+                                    <li>
+                                        Update/maintain UI components 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info-modal-container" id="wordpress-modal-container">
+                            <div class="info-modal">
+                                <h2>About the Site</h2>
+                                <ul>
+                                    <li>
+                                        Update/maintain UI components 
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <!-- map -->

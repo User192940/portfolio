@@ -13,7 +13,26 @@ $(function () {
             $(".modal-container").css("display", "flex");
             $("body").css("overflow-y", "hidden");
         });
-    
+        $("#dev-launch-info").click(function(e) {
+            e.stopPropagation();
+            $("#dl-modal-container").css("display", "flex");
+            $("body").css("overflow-y", "hidden");
+        })
+        $("#netclips-info").click(function(e) {
+            e.stopPropagation();
+            $("#netclips-modal-container").css("display", "flex");
+            $("body").css("overflow-y", "hidden");
+        })
+        $("#showcase-info").click(function(e) {
+            e.stopPropagation();
+            $("#showcase-modal-container").css("display", "flex");
+            $("body").css("overflow-y", "hidden");
+        })
+        $("#wordpress-info").click(function(e) {
+            e.stopPropagation();
+            $("#wordpress-modal-container").css("display", "flex");
+            $("body").css("overflow-y", "hidden");
+        })
         // Close the modal when clicking outside of it
         $(window).click(function(event) {
             if (!$(event.target).closest('.FormRoot').length) {
@@ -23,6 +42,10 @@ $(function () {
             if (!$(event.target).closest('.mil-navigation').length) {
                 $('.mil-menu-btn').removeClass('mil-active');
                 $('.mil-navigation').removeClass('mil-active');
+            }
+            if (!$(event.target).closest('.info-modal').length){
+                $(".info-modal-container").hide();
+                $("body").css("overflow-y", "unset");
             }
         });
     });
