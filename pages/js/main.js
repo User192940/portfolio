@@ -33,6 +33,11 @@ $(function () {
             $("#wordpress-modal-container").css("display", "flex");
             $("body").css("overflow-y", "hidden");
         })
+        $("#shopify-info").click(function(e) {
+            e.stopPropagation();
+            $("#shopify-modal-container").css("display", "flex");
+            $("body").css("overflow-y", "hidden");
+        })
         // Close the modal when clicking outside of it
         $(window).click(function(event) {
             if (!$(event.target).closest('.FormRoot').length) {
