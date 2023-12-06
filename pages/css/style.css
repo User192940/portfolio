@@ -35,6 +35,32 @@ button {
 .bounce {
   animation: bounce 5s ease infinite;
 }
+.scroll-button {
+  opacity: 0;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  font-size: 18px;
+  outline: none;
+  background-color: rgb(32 33 36);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid white;
+}
+.scroll-button.show {
+  opacity: 1;
+  visibility: visible;
+}
+.scroll-button:hover {
+  background-color: rgb(32 33 36);
+}
 .FormRoot {
   width: 260px;
   margin: 0 auto;
