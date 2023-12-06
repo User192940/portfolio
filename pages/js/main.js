@@ -18,6 +18,7 @@ $(function () {
 
         $('.contact-button').click(function (event) {
             event.preventDefault();
+            scrollButton.css("z-index", "10");
             $('.mil-menu-btn').toggleClass('mil-active');
             $('.mil-navigation').toggleClass('mil-active');
         }); 
@@ -25,37 +26,44 @@ $(function () {
         $(".contact-button").click(function(e) {
             // Open the modal
             e.stopPropagation();
+            scrollButton.css("z-index", "10");
             $(".modal-container").css("display", "flex");
             $("body").css("overflow-y", "hidden");
         });
         $("#dev-launch-info").click(function(e) {
             e.stopPropagation();
+            scrollButton.css("z-index", "10");
             $("#dl-modal-container").css("display", "flex");
             $("body").css("overflow-y", "hidden");
         })
         $("#netclips-info").click(function(e) {
             e.stopPropagation();
+            scrollButton.css("z-index", "10");
             $("#netclips-modal-container").css("display", "flex");
             $("body").css("overflow-y", "hidden");
         })
         $("#showcase-info").click(function(e) {
             e.stopPropagation();
+            scrollButton.css("z-index", "10");
             $("#showcase-modal-container").css("display", "flex");
             $("body").css("overflow-y", "hidden");
         })
         $("#wordpress-info").click(function(e) {
             e.stopPropagation();
+            scrollButton.css("z-index", "10");
             $("#wordpress-modal-container").css("display", "flex");
             $("body").css("overflow-y", "hidden");
         })
         $("#shopify-info").click(function(e) {
             e.stopPropagation();
+            scrollButton.css("z-index", "10");
             $("#shopify-modal-container").css("display", "flex");
             $("body").css("overflow-y", "hidden");
         })
         // Close the modal when clicking outside of it
         $(window).click(function(event) {
             if (!$(event.target).closest('.FormRoot').length) {
+                scrollButton.css("z-index", "1000");
                 $(".modal-container").hide();
                 $("body").css("overflow-y", "unset");
             }
@@ -64,6 +72,7 @@ $(function () {
                 $('.mil-navigation').removeClass('mil-active');
             }
             if (!$(event.target).closest('.info-modal').length){
+                scrollButton.css("z-index", "1000");
                 $(".info-modal-container").hide();
                 $("body").css("overflow-y", "unset");
             }
