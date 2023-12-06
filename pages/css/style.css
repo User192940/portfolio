@@ -135,7 +135,7 @@ justify-content: center;
 }
 
 .Input,
-.Textarea {
+.Textarea, .Budget {
   width: 100%;
   display: inline-flex;
   align-items: center;
@@ -146,19 +146,22 @@ justify-content: center;
   box-shadow: 0 0 0 1px rgba(0,0,0,.7);
 }
 .Input:hover,
-.Textarea:hover {
+.Textarea:hover,
+.Budget:hover {
   box-shadow: 0 0 0 1px black;
 }
 .Input:focus,
-.Textarea:focus {
+.Textarea:focus,
+.Budget:focus {
   box-shadow: 0 0 0 2px black;
 }
 .Input::selection,
-.Textarea::selection {
+.Textarea::selection,
+.Budget::selection {
   background-color: rgba(0,0,0,.7);
 }
 
-.Input {
+.Input, .Budget {
   padding: 0 10px;
   height: 35px;
   line-height: 1;
@@ -919,7 +922,7 @@ frame
   margin-bottom: 0;
 }
 .mil-left-panel .mil-social-icons li a {
-  font-size: 16åpx;
+  font-size: 16px;
   color: rgb(32, 33, 36);
   -webkit-transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
   transition: 0.2s cubic-bezier(0, 0, 0.3642, 1);
@@ -2114,8 +2117,8 @@ portfolio item
   .mil-portfolio-item.mil-carousel-item .mil-description {
     height: auto;
     padding-top: 30px;
-    -webkit-transition-delay: none;
-            transition-delay: none;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
     -webkit-transform: none !important;
             transform: none !important;
   }
