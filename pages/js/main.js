@@ -1,6 +1,21 @@
 $(function () {
     "use strict";
     $(document).ready(function() {
+        var scrollButton = $(".scroll-button");
+
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                scrollButton.addClass('show');
+            } else {
+                scrollButton.removeClass('show');
+            }
+          });
+          
+          scrollButton.on('click', function(e) {
+            e.stopPropagation();
+            $('html, body').animate({scrollTop:0}, '300');
+          });
+
         $('.contact-button').click(function (event) {
             event.preventDefault();
             $('.mil-menu-btn').toggleClass('mil-active');
