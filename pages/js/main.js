@@ -81,8 +81,8 @@ $(function () {
     $(".FormRoot").validate({
         errorPlacement: function(error, element) {
             var prevElement = $(element).prev();
-            if (prevElement.attr("name") == "email"
-                || prevElement.attr("name") == "question") {
+            if (prevElement.attr("id") == "email-error"
+                || prevElement.attr("id") == "question") {
                     error.appendTo(prevElement);
             }
         },
