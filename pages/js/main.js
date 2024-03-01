@@ -30,26 +30,31 @@ $(function () {
         });
         $("#dev-launch-info").click(function(e) {
             e.stopPropagation();
+            scrollButton.css("z-index", "10");
             $("#dl-modal-container").css("display", "flex");
             $("body").css("overflow-y", "hidden");
         })
         $("#netclips-info").click(function(e) {
             e.stopPropagation();
+            scrollButton.css("z-index", "10");
             $("#netclips-modal-container").css("display", "flex");
             $("body").css("overflow-y", "hidden");
         })
         $("#showcase-info").click(function(e) {
             e.stopPropagation();
+            scrollButton.css("z-index", "10");
             $("#showcase-modal-container").css("display", "flex");
             $("body").css("overflow-y", "hidden");
         })
         $("#wordpress-info").click(function(e) {
             e.stopPropagation();
+            scrollButton.css("z-index", "10");
             $("#wordpress-modal-container").css("display", "flex");
             $("body").css("overflow-y", "hidden");
         })
         $("#shopify-info").click(function(e) {
             e.stopPropagation();
+            scrollButton.css("z-index", "10");
             $("#shopify-modal-container").css("display", "flex");
             $("body").css("overflow-y", "hidden");
         })
@@ -64,6 +69,7 @@ $(function () {
                 $('.mil-navigation').removeClass('mil-active');
             }
             if (!$(event.target).closest('.info-modal').length){
+                scrollButton.css("z-index", "1000");
                 $(".info-modal-container").hide();
                 $("body").css("overflow-y", "unset");
             }
