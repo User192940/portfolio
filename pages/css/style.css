@@ -65,6 +65,16 @@ button {
   width: 260px;
   margin: 0 auto;
 }
+.card-container{
+  display:flex;
+}
+.website-card{
+  width:50%;
+  padding:1rem;
+  margin:auto;
+  max-width:550px;
+  background-color: rgb(71 105 188);
+}
 .info-modal-container{
   position: fixed;
   z-index: 10;
@@ -78,6 +88,7 @@ button {
   justify-content: center;
 }
 .info-modal{
+  flex-grow:1;
   background-color: white;
   border-radius: .5rem;
   padding: 2rem;
@@ -682,6 +693,16 @@ scrollbar
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
 }
+.projects{
+  background: url(../img/portfolio/portfolio-bg.jpg);
+  background-size:cover;
+}
+.mil-navigation nav ul li a:hover{
+  text-decoration: underline;
+  text-decoration-color: rgb(71 105 188);
+  -moz-text-decoration-color: rgb(71 105 188);
+  text-decoration-thickness: 3px;
+}
 @media screen and (max-width: 992px) {
   .mil-progress-track {
     display: none;
@@ -1242,7 +1263,6 @@ frame
 
 .mil-content {
   padding-top: 90px;
-  margin-left: 90px;
   width: calc(100% - 90px);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1258,7 +1278,7 @@ frame
 .mil-content .mil-scroll-wrapper .mil-container {
   overflow: hidden;
   margin: 0 auto;
-  width: calc(63% + 1px);
+  width: calc(80% + 1px);
 }
 .mil-content .mil-scroll-wrapper .mil-container-fw {
   overflow: hidden;
@@ -1353,8 +1373,6 @@ content banner
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1447,7 +1465,6 @@ about
 
 .mil-oval-frame-2 {
   margin: 0 auto;
-  padding-bottom: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1455,20 +1472,20 @@ about
       -ms-flex-pack: center;
           justify-content: center;
   background-color: rgba(32, 33, 36, 0.1);
-  width: 170px;
-  height: 170px;
-  border-bottom-right-radius: 200px;
-  border-bottom-left-radius: 200px;
+  width: 350px;
+  height: 350px;
+  border-radius: 200px;
 }
+
 @media screen and (max-height: 750px) {
   .mil-oval-frame-2 {
+    display:none;
     border-radius: 50%;
   }
 }
 .mil-oval-frame-2 img {
-  margin-top: auto;
-  width: 120px;
-  height: 120px;
+  margin:auto 0;
+  height: 320px;
   border-radius: 50%;
 }
 
