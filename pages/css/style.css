@@ -352,13 +352,14 @@ justify-content: center;
     text-wrap: balance;
     max-width: 75%;
     margin: 0 auto 1.5rem auto;
+    text-align:center;
 }
 .contact-cta{
   text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    max-width: 30%;
+    width: 300px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -367,7 +368,7 @@ justify-content: center;
     align-items: center;
     margin: 1.4rem auto;
 }
-.contact-cta button{
+.contact-cta-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2823,14 +2824,4 @@ html.is-animating .mil-menu-transition {
 html.is-animating .mil-menu-transition ul li.mil-active a:before {
   -webkit-transform: scale(0);
           transform: scale(0);
-}
-@keyframes bounce {
-    0% { transform:translateY(0%); }
-    5% { transform:translateY(-20%); }
-    10% { transform:translateY(0%); }
-    15% { transform:translateY(-10%); }
-    17% { transform:translateY(0%); }
-    19% { transform:translateY(-5%); }
-    20% { transform:translateY(0); }
-    100% { transform:translateY(0); }
 }

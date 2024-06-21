@@ -6,6 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta data-rh="true" property="og:type" content="article">
+    <meta data-rh="true" property="og:title" content="David Fedchuk - Web Developer">
+    <meta data-rh="true" property="og:url" content="https://dfedchuk5.bitweb1.nwtc.edu/">
+    <meta data-rh="true" property="og:image" content="https://dfedchuk5.bitweb1.nwtc.edu/pages/img/portfolio/portfolio-home.webp">
     <link rel="stylesheet" href="https://unpkg.com/normalize.css">
     <link rel="icon" type="image/x-icon" href="https://instructure-uploads-pdx.s3.us-west-2.amazonaws.com/account_211720000000000001/attachments/12223/favicon.ico">
     <!-- bootstrap grid css -->
@@ -32,8 +36,7 @@
             <!-- top bar -->
             <div class="mil-top-panel">
 
-                <!-- You need to remove the "mil-dot" class if you don't need a dot -->
-                <a href="#about" class="mil-logo"><span>D</span></a>
+                <a href="#top" class="mil-logo"><span>D</span></a>
 
                 <div class="mil-navigation">
                     <nav id="" class="mil-menu-transition">
@@ -41,10 +44,11 @@
                             <li class="mil-has-children">
                                 <a class="resume-anchor" target="_blank" href="./pages/Resume.pdf">Resume</a>
                             </li>
-                            <li class="mil-has-children">
-                                <!-- create a scroll effect for the about anchor click in Javascript -->
+                            <!-- <li class="mil-has-children">
+                                 create a scroll effect for the about anchor click in Javascript 
                                 <a class="about-anchor" href="#about">About</a>
-                            </li>
+                            </li> 
+                            -->
                             <li class="mil-has-children">
                                 <a class="projects-anchor" href="#projects">Projects</a>
                             </li>
@@ -115,7 +119,7 @@
                     <!-- <section id="about" class="mil-p-0-90">
                         
                     </section> -->
-                    <section class="projects">
+                    <section class="projects" id="projects">
                         <div class="container">
                             <div class="portfolio-content">
                                 <p>Portfolio</p>
@@ -126,28 +130,28 @@
                                     <a href="build/index.html"  target="_blank" class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
                                         <img src="pages/img/portfolio/netflix-1024.webp" alt="cover">
                                         <p>React, NodeJS, Tailwind, Firebase</p>
-                                        <h3>NETCLIPS</h3>
+                                        <h3>Netclips</h3>
                                     </a>
                                 </div>
                                 <div class="project-card aos-init aos-animate" data-aos="fade">
                                     <a href="https://silvalux.myshopify.com/" target="_blank" class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
                                         <img src="pages/img/portfolio/silvalux.webp" alt="cover">
                                         <p>Shopify, SEO</p>
-                                        <h3>Silvalux</h3>
+                                        <h3>Silvalux Store</h3>
                                     </a>
                                 </div>
                                 <div class="aos-init aos-animate project-card" data-aos="fade">
-                                    <a href="wfed2/portfolio-showcase/index.html"  target="_blank" class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
+                                    <a href="wfed2/website-reviews/portfolio-showcase/index.html"  target="_blank" class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
                                             <img src="pages/img/portfolio/portfolio-showcase.jpg" alt="cover" data-swiper-parallax="-130" data-swiper-parallax-scale="1.25">
                                             <p>Javascript, CSS, and HTML</p>
-                                            <h3>Portfolio Showcase</h3>
+                                            <h3>NWTC Portfolio Showcase</h3>
                                     </a>
                                 </div>
                                 <div class="project-card aos-init aos-animate" data-aos="fade">
                                     <a href="" onclick="window.open('https://dfedchuk.bitweb1.nwtc.edu/webmgmt/');" class="mil-portfolio-item mil-item-2 mil-up mil-mb-60">
                                         <img src="pages/img/portfolio/nwtc-1024.webp" alt="cover" data-swiper-parallax="-130" data-swiper-parallax-scale="1.25">
                                         <p>WordPress and plugins</p>
-                                        <h3>College of Business Website</h3>
+                                        <h3>Northeast Wisconsin Technical College</h3>
                                     </a>
                                 </div>
                             </div>
@@ -159,13 +163,13 @@
                             <h3 class="contact-subheading">Contact Me</h3>
                             <h2 class="contact-heading">Your Best Candidate For Web Development. </h2>
                             <div class="contact-cta">
-                                <button class="email">
+                                <a class="contact-cta-button email" href="mailto:davfedchuk@gmail.com" target="_blank">
                                     EMAIL ME
-                                    <i></i>
-                                </button>
-                                <button class="linkedin">
+                                <i></i>
+                                </a>
+                                <a class="contact-cta-button linkedin" href="https://www.linkedin.com/in/david-fedchuk-673689239/" target="_blank">
                                     LINKEDIN
-                                </button>
+                                </a>  
                             </div>
                         </div>
                     </section>
