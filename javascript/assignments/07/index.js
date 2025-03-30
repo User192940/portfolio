@@ -1,6 +1,6 @@
 $(document).ready(function(){
         containsContent = false;
-        apiKey = "7ca51b99da06f42f8394acc4a9ff0b1f";
+        apiKey = "";
         const searchBtn = document.getElementById("searchBtn");
         const cityInput = document.getElementById("cityInput");
         const weatherInfo = document.getElementById("weatherInfo");
