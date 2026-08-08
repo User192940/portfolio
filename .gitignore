@@ -3,3 +3,5 @@ dist
 website-coding
 .*
 !/.gitignore
+wcmd/wordpress/wp-config.php
+.env
